@@ -1,0 +1,6 @@
+4 = PWM for Sim mass motor A
+5 = PWM for Sim mass motor B
+13 = INb (swap to 16 possibly)
+14 = PWM VNH motor driver
+15 = INa
+6-9 = TBS receiver channels
