@@ -8,3 +8,4 @@
 20-21 - SD DI and DO
 11-13 = SD SPI Pins
 2&3 = Limit Switch pins
+19&18 = I2C Pins for Barometer
