@@ -1,11 +1,11 @@
 4 = PWM for Sim mass motor A
 5 = PWM for Sim mass motor B
-16 = INb (SWAP TO 16 FROM 13!)
+20 = INb (SWAP TO 16 FROM 13!)
 14 = PWM VNH motor driver
 15 = INa
 6-9 = TBS receiver channels
-23 = relay pin
-20-21 - SD DI and DO
+3 = relay pin
+21-22 = SD DI and DO
 11-13 = SD SPI Pins
-2&3 = Limit Switch pins
+0&1 = Limit Switch pins
 19&18 = I2C Pins for Barometer

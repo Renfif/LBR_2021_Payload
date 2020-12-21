@@ -1,0 +1,32 @@
+int M1INA = 2;
+int M1INB = 4;
+int M1EN = 6;
+int M2INA = 7;
+int M2INB = 8;
+int M1PWM = 9;
+int M2PWM = 10;
+int M2EN = 12;
+
+void setup() {
+
+  pinMode(M1INA, OUTPUT);
+  pinMode(M1INB, OUTPUT);
+  pinMode(M1EN, OUTPUT);
+  pinMode(M2INA, OUTPUT);
+  pinMode(M2INB, OUTPUT);
+  pinMode(M1PWM, OUTPUT);
+  pinMode(M2PWM, OUTPUT);
+  pinMode(M2EN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(M2EN, HIGH);    //enable left motor
+  digitalWrite(M1EN, HIGH);    //enable right motor
+  digitalWrite (M1INA, HIGH);  //forward
+  digitalWrite (M1INB, LOW);
+  analogWrite(M1PWM, 255);  
+  digitalWrite (M2INA, HIGH);   //forward
+  digitalWrite (M2INB, LOW);
+  analogWrite(M2PWM, 255);
+
+}
