@@ -1,4 +1,4 @@
-19011836221958220
+19013464811383463
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -59703,13 +59703,6 @@ DIL DIP PDIP 2.54mm 7.62mm 300mil
 4
 4
 PJS
-2N2222AUB_Transistor
-3-pin TSOT23 package, http://www.analog.com.tw/pdf/All_In_One.pdf
-TSOT-23
-0
-3
-3
-PJS
 36-3034-ND_CoinCellHolder
 
 
@@ -59717,47 +59710,68 @@ PJS
 3
 2
 PJS
-BMP388
-
-
-0
-5
-5
-PJS
-D24V22F5
-
-
-0
-5
-5
-PJS
-G2R-2-DC5
-
-
-0
-9
-8
-PJS
-HFW8R-1STE1H1LF_FFC
+BMP388_Altimeter
 
 
 0
 10
 9
 PJS
-LimitSwitch
+D24V22F5_VoltageRegulator
+
+
+0
+5
+5
+PJS
+DRV8871_MotorDriver
+
+
+0
+8
+8
+PJS
+G2R-2-DC5_Relay
+
+
+0
+9
+7
+PJS
+HFW8R-1STE1H1LF_FFC
+
+
+0
+10
+8
+PJS
+JST_2Pin
 
 
 0
 2
 2
 PJS
-TBS_Crossfire_RX
+MMBT2222A_Transistor
 
 
 0
-8
-8
+3
+3
+PJS
+MicroSD_Slot
+1.10mm Pitch microSD Memory Card Connector, Surface Mount, Push-Pull Type, 1.42mm Height, with Detect Switch (https://www.molex.com/pdm_docs/sd/1040310811_sd.pdf)
+microSD SD molex
+0
+14
+11
+PJS
+TBS_Crossfire_RF_Receiver
+
+
+0
+6
+6
 PJS
 Teensy4.0
 
@@ -59779,13 +59793,6 @@ XT60 female vertical
 0
 2
 2
-PJS
-microSD_HC_Molex_104031-0811
-1.10mm Pitch microSD Memory Card Connector, Surface Mount, Push-Pull Type, 1.42mm Height, with Detect Switch (https://www.molex.com/pdm_docs/sd/1040310811_sd.pdf)
-microSD SD molex
-0
-14
-11
 Package_BGA
 Analog_BGA-28_4.0x6.25mm_Layout4x7_P0.8mm_Ball0.45mm_Pad0.4
 Analog BGA-28 4.0mm x 6.25mm package, pitch 0.4mm pad, based on https://www.analog.com/media/en/technical-documentation/data-sheets/8063fa.pdf
