@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 14)
+    (drawings 13)
     (tracks 0)
     (zones 0)
     (modules 0)
@@ -101,9 +101,6 @@
     (uvia_drill 0.1)
   )
 
-  (gr_text "uh oh stinky" (at 150.495 103.504999) (layer Dwgs.User)
-    (effects (font (size 1 1) (thickness 0.15)))
-  )
   (dimension 114.299998 (width 0.15) (layer Dwgs.User)
     (gr_text "114.300 mm" (at 130.175 27.274999) (layer Dwgs.User)
       (effects (font (size 1 1) (thickness 0.15)))
