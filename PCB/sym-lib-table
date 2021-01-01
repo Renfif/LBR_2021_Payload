@@ -1,7 +1,6 @@
 (sym_lib_table
-  (lib (name DEV-15583)(type Legacy)(uri C:/Users/Stati/Documents/School/Extracurriculars/KiCad/Libraries/DEV-15583.lib)(options "")(descr ""))
   (lib (name B6B-ZR)(type Legacy)(uri ${KIPRJMOD}/B6B-ZR.lib)(options "")(descr ""))
   (lib (name PJS-cache)(type Legacy)(uri ${KIPRJMOD}/PJS-cache.lib)(options "")(descr ""))
-  (lib (name PJS)(type Legacy)(uri C:/Users/Stati/Documents/School/Clubs/KiCad/Libraries/PJS.lib)(options "")(descr ""))
+  (lib (name PJS)(type Legacy)(uri C:/Users/raidr/Documents/Programming/LBR/LBR_2021_Payload/PCB/PJS.lib)(options "")(descr ""))
   (lib (name PJS-rescue)(type Legacy)(uri ${KIPRJMOD}/PJS-rescue.lib)(options "")(descr ""))
 )
