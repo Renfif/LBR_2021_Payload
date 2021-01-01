@@ -1,4 +1,4 @@
-19013464811383463
+19021512312667523
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -59703,11 +59703,25 @@ DIL DIP PDIP 2.54mm 7.62mm 300mil
 4
 4
 PJS
+1SS351-TB-E_Diode
+
+
+0
+3
+3
+PJS
 36-3034-ND_CoinCellHolder
 
 
 0
 3
+2
+PJS
+0402_Resistor
+Resistor footprint for DRV8871 Motor Driver
+
+0
+2
 2
 PJS
 BMP388_Altimeter
@@ -59716,6 +59730,13 @@ BMP388_Altimeter
 0
 10
 9
+PJS
+CL05B104KO5NNNC_Capacitor
+0.1µF
+
+0
+2
+2
 PJS
 D24V22F5_VoltageRegulator
 
@@ -59730,6 +59751,13 @@ DRV8871_MotorDriver
 0
 8
 8
+PJS
+EEE-1CA470SP_Capacitor
+47µf Capacitor
+
+0
+2
+2
 PJS
 G2R-2-DC5_Relay
 
@@ -59760,11 +59788,18 @@ MMBT2222A_Transistor
 3
 PJS
 MicroSD_Slot
-1.10mm Pitch microSD Memory Card Connector, Surface Mount, Push-Pull Type, 1.42mm Height, with Detect Switch (https://www.molex.com/pdm_docs/sd/1040310811_sd.pdf)
-microSD SD molex
+
+
 0
-14
-11
+15
+9
+PJS
+RMCF2512FT2K00_Resistor
+2k
+
+0
+2
+2
 PJS
 TBS_Crossfire_RF_Receiver
 
