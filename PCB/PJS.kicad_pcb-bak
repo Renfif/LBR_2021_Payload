@@ -260,6 +260,11 @@
     (pad 14 thru_hole oval (at 8.2 -7.95 180) (size 1.27 1) (drill 0.55) (layers *.Cu *.Mask))
     (pad 12 thru_hole oval (at 4.2 -7.95 180) (size 1.27 1) (drill 0.55) (layers *.Cu *.Mask))
     (pad 10 thru_hole oval (at 0.2 -7.95 180) (size 1.27 1) (drill 0.55) (layers *.Cu *.Mask))
+    (model ${KIPRJMOD}/Models/TBS_Crossfire_Nano_Diversity.step
+      (offset (xyz -12.1 -9.25 2.75))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module PJS:XT30_Female_MotorConnector (layer F.Cu) (tedit 5FC95B39) (tstamp 5FF12A24)
