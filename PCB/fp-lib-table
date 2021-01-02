@@ -1,4 +1,3 @@
 (fp_lib_table
   (lib (name PJS)(type KiCad)(uri ${KIPRJMOD}/PJS.pretty)(options "")(descr ""))
-  (lib (name JST)(type KiCad)(uri C:/Users/Stati/Documents/School/Clubs/KiCad/Libraries/Downloads)(options "")(descr ""))
 )
