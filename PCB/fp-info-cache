@@ -1,4 +1,4 @@
-19024734186979182
+19024734527956656
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -59749,8 +59749,8 @@ DRV8871_MotorDriver
 
 
 0
-8
-8
+9
+9
 PJS
 EEE-1CA470SP_Capacitor
 47µf Capacitor
@@ -59819,8 +59819,8 @@ TBS_Crossfire_RF_Receiver
 
 
 0
-6
-6
+14
+14
 PJS
 Teensy4.0
 
