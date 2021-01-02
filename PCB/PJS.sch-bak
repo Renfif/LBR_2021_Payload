@@ -150,9 +150,9 @@ UAS_DriverIN1
 Text Label 6900 3350 0    50   ~ 0
 UAS_DriverIN2
 Text Label 2250 10750 2    50   ~ 0
-Link_DriverOutA
+Link_DriverOut1
 Text Label 2250 10850 2    50   ~ 0
-Link_DriverOutB
+Link_DriverOut2
 $Comp
 L power:+5V #PWR0113
 U 1 1 5FF728DB
@@ -290,7 +290,7 @@ $EndComp
 Text Label 3800 10150 2    50   ~ 0
 LockA_DriverOUT1
 Text Label 3800 10250 2    50   ~ 0
-LockA_DriverOut2
+LockA_DriverOUT2
 Text Label 3800 10750 2    50   ~ 0
 LockB_DriverOUT1
 Text Label 3800 10850 2    50   ~ 0
