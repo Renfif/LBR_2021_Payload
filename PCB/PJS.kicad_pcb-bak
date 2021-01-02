@@ -768,6 +768,11 @@
       (net 6 /UAS_DriverIN1))
     (pad 8 smd rect (at 2.7 -1.905 180) (size 1.55 0.6) (layers F.Cu F.Paste)
       (net 7 /UAS_DriverOUT2))
+    (model ${KIPRJMOD}/Models/Texas_Instruments_-_DRV8871DDARQ1.step
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module PJS:DRV8871_MotorDriver (layer F.Cu) (tedit 5FEDB3CF) (tstamp 5FF126B2)
@@ -1064,6 +1069,11 @@
       (net 2 +12V))
     (pad 6 smd rect (at 2.7 0.635 180) (size 1.55 0.6) (layers F.Cu F.Paste)
       (net 12 /Link_DriverOUT1))
+    (model ${KIPRJMOD}/Models/Texas_Instruments_-_DRV8871DDARQ1.step
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module PJS:DRV8871_MotorDriver (layer F.Cu) (tedit 5FEDB3CF) (tstamp 5FF126D1)
@@ -1360,6 +1370,11 @@
       (net 16 /LockA_DriverIN1))
     (pad 8 smd rect (at 2.7 -1.905 180) (size 1.55 0.6) (layers F.Cu F.Paste)
       (net 17 /LockA_DriverOUT2))
+    (model ${KIPRJMOD}/Models/Texas_Instruments_-_DRV8871DDARQ1.step
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module PJS:DRV8871_MotorDriver (layer F.Cu) (tedit 5FEDB3CF) (tstamp 5FF126F0)
@@ -1656,6 +1671,11 @@
       (net 2 +12V))
     (pad 6 smd rect (at 2.7 0.635 180) (size 1.55 0.6) (layers F.Cu F.Paste)
       (net 22 /LockB_DriverOUT1))
+    (model ${KIPRJMOD}/Models/Texas_Instruments_-_DRV8871DDARQ1.step
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module PJS:TBS_Crossfire_RF_Receiver (layer F.Cu) (tedit 5FEDC74D) (tstamp 5FF12714)
@@ -1718,6 +1738,11 @@
       (net 34 /3.3V_Coin))
     (pad 2 smd rect (at 0 0 180) (size 3.96 3.96) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
+    (model ${KIPRJMOD}/Models/CR2032_closed_battery_BH.step
+      (offset (xyz 0 0 3.1))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module PJS:EEE-1CA470SP_Capacitor (layer F.Cu) (tedit 5FEECBF1) (tstamp 5FF1274B)
@@ -2031,6 +2056,11 @@
     (pad 2 smd rect (at -2.5 -3.25 180) (size 0.6 2) (layers F.Cu F.Paste F.Mask)
       (net 36 /SD_DAT3))
     (pad "" smd rect (at -4.5 -1.15 180) (size 0.7 4.199999) (layers F.Cu F.Paste F.Mask))
+    (model ${KIPRJMOD}/Models/shfw08r_1stlf.stp
+      (offset (xyz 11 3 2))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 90 0 0))
+    )
   )
 
   (module PJS:SM02B-PASS-TBT_Connector (layer F.Cu) (tedit 5FF01177) (tstamp 5FF1282B)
@@ -2787,6 +2817,11 @@
       (net 60 "Net-(J1-Pad15)"))
     (pad 1 smd rect (at -2.9 -6.355 180) (size 0.8 1.24) (layers F.Cu F.Paste F.Mask)
       (net 59 "Net-(J1-Pad16)"))
+    (model ${KIPRJMOD}/Models/Molex_-_5031821852.step
+      (offset (xyz -0.25 0.5 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (gr_circle (center 130.936999 98.805998) (end 194.436998 98.805998) (layer Edge.Cuts) (width 0.2))
