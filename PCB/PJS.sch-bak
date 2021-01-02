@@ -95,17 +95,13 @@ F 3 "" H 8300 8650 50  0001 C CNN
 	1    8300 8650
 	0    1    1    0   
 $EndComp
-Text Label 6900 4050 0    50   ~ 0
+Text Label 6900 4250 0    50   ~ 0
 RF_CH3
-Text Label 6900 3450 0    50   ~ 0
-S1_Link
-Text Label 6900 3550 0    50   ~ 0
-S2_Door
-Text Label 6900 4150 0    50   ~ 0
+Text Label 6900 4350 0    50   ~ 0
 RF_CH4
-Text Label 6900 3950 0    50   ~ 0
+Text Label 6900 4150 0    50   ~ 0
 RF_CH2
-Text Label 6900 3850 0    50   ~ 0
+Text Label 6900 4050 0    50   ~ 0
 RF_CH1
 Wire Wire Line
 	8300 8950 8800 8950
@@ -149,9 +145,9 @@ Text Label 2250 10150 2    50   ~ 0
 UAS_DriverOUT1
 Text Label 2250 10250 2    50   ~ 0
 UAS_DriverOUT2
-Text Label 6900 3650 0    50   ~ 0
+Text Label 6900 3250 0    50   ~ 0
 UAS_DriverIN1
-Text Label 6900 3750 0    50   ~ 0
+Text Label 6900 3350 0    50   ~ 0
 UAS_DriverIN2
 Text Label 2250 10750 2    50   ~ 0
 Link_DriverOutA
@@ -191,8 +187,6 @@ Wire Wire Line
 	8100 7000 8400 7000
 Text Label 8400 7000 2    50   ~ 0
 Alt_SDI
-Text Label 10200 5750 2    50   ~ 0
-Relay_Signal
 Text Label 10200 3950 2    50   ~ 0
 SD_DAT0
 Text Label 10200 3650 2    50   ~ 0
@@ -219,12 +213,6 @@ F 3 "" H 9650 3850 50  0001 C CNN
 	1    9650 3850
 	0    -1   -1   0   
 $EndComp
-Text Label 6900 5150 0    50   ~ 0
-Link_DriverPWM
-Text Label 6900 5350 0    50   ~ 0
-Link_DriverInB
-Text Label 6900 5250 0    50   ~ 0
-Link_DriverInA
 Wire Wire Line
 	1650 10150 2250 10150
 Wire Wire Line
@@ -245,29 +233,19 @@ Wire Wire Line
 Wire Wire Line
 	6900 5550 7450 5550
 Wire Wire Line
-	6900 5350 7450 5350
-Wire Wire Line
-	6900 5250 7450 5250
-Wire Wire Line
-	6900 5150 7450 5150
-Wire Wire Line
 	6900 4550 7450 4550
+Wire Wire Line
+	6900 4350 7450 4350
+Wire Wire Line
+	6900 4250 7450 4250
 Wire Wire Line
 	6900 4150 7450 4150
 Wire Wire Line
 	6900 4050 7450 4050
 Wire Wire Line
-	6900 3950 7450 3950
+	6900 3350 7450 3350
 Wire Wire Line
-	6900 3850 7450 3850
-Wire Wire Line
-	6900 3750 7450 3750
-Wire Wire Line
-	6900 3650 7450 3650
-Wire Wire Line
-	6900 3550 7450 3550
-Wire Wire Line
-	6900 3450 7450 3450
+	6900 3250 7450 3250
 $Comp
 L Device:D_Schottky D1
 U 1 1 5FFF832A
@@ -354,21 +332,8 @@ F 3 "" H 5950 3950 50  0001 C CNN
 	1    5950 3950
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:GND #PWR0121
-U 1 1 5FF0A3C2
-P 5950 3350
-F 0 "#PWR0121" H 5950 3100 50  0001 C CNN
-F 1 "GND" V 5955 3222 50  0000 R CNN
-F 2 "" H 5950 3350 50  0001 C CNN
-F 3 "" H 5950 3350 50  0001 C CNN
-	1    5950 3350
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	5950 4450 6450 4450
-Wire Wire Line
-	5950 3250 6450 3250
 Wire Wire Line
 	6450 3850 5950 3850
 Wire Wire Line
@@ -412,19 +377,6 @@ F 3 "" H 7750 7300 50  0001 C CNN
 	1    7750 6950
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR0123
-U 1 1 5FF19762
-P 5950 5750
-F 0 "#PWR0123" H 5950 5500 50  0001 C CNN
-F 1 "GND" V 5955 5622 50  0000 R CNN
-F 2 "" H 5950 5750 50  0001 C CNN
-F 3 "" H 5950 5750 50  0001 C CNN
-	1    5950 5750
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	5950 5650 6450 5650
 Wire Wire Line
 	1850 5250 1750 5250
 $Comp
@@ -1185,8 +1137,6 @@ Wire Wire Line
 	2650 6550 3350 6550
 Wire Wire Line
 	2650 6650 2750 6650
-Text Label 6450 5650 2    50   ~ 0
-S3_UAS
 Wire Wire Line
 	3150 10850 3800 10850
 Wire Wire Line
@@ -1269,22 +1219,6 @@ F 3 "" H 2250 3950 50  0001 C CNN
 	1    2250 3650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9650 5750 10200 5750
-Wire Wire Line
-	9650 4050 10200 4050
-Wire Wire Line
-	9650 3950 10200 3950
-Wire Wire Line
-	9650 3750 10200 3750
-Wire Wire Line
-	9650 3650 10200 3650
-Wire Wire Line
-	9650 3550 10200 3550
-Wire Wire Line
-	9650 3450 10200 3450
-Wire Wire Line
-	9650 3350 10200 3350
 $Comp
 L power:GND #PWR0156
 U 1 1 5FF722D1
@@ -1307,14 +1241,6 @@ F 3 "" H 10100 5450 50  0001 C CNN
 	1    10100 5450
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	9650 5450 10100 5450
-Wire Wire Line
-	10100 5550 9650 5550
-Wire Wire Line
-	7450 3350 6900 3350
-Text Label 6900 3350 0    50   ~ 0
-S3_UAS
 $Comp
 L PJS:XT60-F_BatteryConnector X4
 U 1 1 5FF20F6C
@@ -1340,23 +1266,12 @@ F 3 "" H 12550 1650 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L PJS:SM02B-PASS-TBT_SwitchConnector J6
-U 1 1 5FF52CF4
-P 5700 3300
-F 0 "J6" H 5700 3615 50  0000 C CNN
-F 1 "SM02B-PASS-TBT_SwitchConnector" H 5700 3524 50  0000 C CNN
-F 2 "PJS:SM02B-PASS-TBT_SwitchConnector" H 5700 4100 50  0001 C CNN
-F 3 "" H 5700 4100 50  0001 C CNN
-	1    5700 3300
-	1    0    0    -1  
-$EndComp
-$Comp
 L PJS:SM02B-PASS-TBT_SwitchConnector J7
 U 1 1 5FF5A567
 P 5700 3900
 F 0 "J7" H 5700 4215 50  0000 C CNN
 F 1 "SM02B-PASS-TBT_SwitchConnector" H 5700 4124 50  0000 C CNN
-F 2 "PJS:SM02B-PASS-TBT_SwitchConnector" H 5700 4700 50  0001 C CNN
+F 2 "PJS:SM02B-PASS-TBT_Connector" H 5700 4700 50  0001 C CNN
 F 3 "" H 5700 4700 50  0001 C CNN
 	1    5700 3900
 	1    0    0    -1  
@@ -1367,75 +1282,9 @@ U 1 1 5FF60366
 P 5700 4500
 F 0 "J8" H 5700 4815 50  0000 C CNN
 F 1 "SM02B-PASS-TBT_SwitchConnector" H 5700 4724 50  0000 C CNN
-F 2 "PJS:SM02B-PASS-TBT_SwitchConnector" H 5700 5300 50  0001 C CNN
+F 2 "PJS:SM02B-PASS-TBT_Connector" H 5700 5300 50  0001 C CNN
 F 3 "" H 5700 5300 50  0001 C CNN
 	1    5700 4500
-	1    0    0    -1  
-$EndComp
-$Comp
-L PJS:SM02B-PASS-TBT_SwitchConnector J9
-U 1 1 5FF66278
-P 5700 5100
-F 0 "J9" H 5700 5415 50  0000 C CNN
-F 1 "SM02B-PASS-TBT_SwitchConnector" H 5700 5324 50  0000 C CNN
-F 2 "PJS:SM02B-PASS-TBT_SwitchConnector" H 5700 5900 50  0001 C CNN
-F 3 "" H 5700 5900 50  0001 C CNN
-	1    5700 5100
-	1    0    0    -1  
-$EndComp
-$Comp
-L PJS:SM02B-PASS-TBT_SwitchConnector J10
-U 1 1 5FF6C1E4
-P 5700 5700
-F 0 "J10" H 5700 6015 50  0000 C CNN
-F 1 "SM02B-PASS-TBT_SwitchConnector" H 5700 5924 50  0000 C CNN
-F 2 "PJS:SM02B-PASS-TBT_SwitchConnector" H 5700 6500 50  0001 C CNN
-F 3 "" H 5700 6500 50  0001 C CNN
-	1    5700 5700
-	1    0    0    -1  
-$EndComp
-$Comp
-L PJS:B02P-VL_MotorConnector J2
-U 1 1 5FF7DDE6
-P 1400 10200
-F 0 "J2" H 1400 10515 50  0000 C CNN
-F 1 "B02P-VL_MotorConnector" H 1400 10424 50  0000 C CNN
-F 2 "PJS:B02P-VL_MotorConnector" H 1400 11000 50  0001 C CNN
-F 3 "" H 1400 11000 50  0001 C CNN
-	1    1400 10200
-	1    0    0    -1  
-$EndComp
-$Comp
-L PJS:B02P-VL_MotorConnector J3
-U 1 1 5FF7E621
-P 1400 10800
-F 0 "J3" H 1400 11115 50  0000 C CNN
-F 1 "B02P-VL_MotorConnector" H 1400 11024 50  0000 C CNN
-F 2 "PJS:B02P-VL_MotorConnector" H 1400 11600 50  0001 C CNN
-F 3 "" H 1400 11600 50  0001 C CNN
-	1    1400 10800
-	1    0    0    -1  
-$EndComp
-$Comp
-L PJS:B02P-VL_MotorConnector J4
-U 1 1 5FF8451C
-P 2900 10200
-F 0 "J4" H 2900 10515 50  0000 C CNN
-F 1 "B02P-VL_MotorConnector" H 2900 10424 50  0000 C CNN
-F 2 "PJS:B02P-VL_MotorConnector" H 2900 11000 50  0001 C CNN
-F 3 "" H 2900 11000 50  0001 C CNN
-	1    2900 10200
-	1    0    0    -1  
-$EndComp
-$Comp
-L PJS:B02P-VL_MotorConnector J5
-U 1 1 5FF89FAD
-P 2900 10800
-F 0 "J5" H 2900 11115 50  0000 C CNN
-F 1 "B02P-VL_MotorConnector" H 2900 11024 50  0000 C CNN
-F 2 "PJS:B02P-VL_MotorConnector" H 2900 11600 50  0001 C CNN
-F 3 "" H 2900 11600 50  0001 C CNN
-	1    2900 10800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1450,14 +1299,177 @@ F 3 "" H 13400 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PJS:Teensy4.0 U?
+L PJS:SM02B-PASS-TBT_Connector J4
+U 1 1 5FF15321
+P 2900 10200
+F 0 "J4" H 2900 10515 50  0000 C CNN
+F 1 "SM02B-PASS-TBT_Connector" H 2900 10424 50  0000 C CNN
+F 2 "PJS:SM02B-PASS-TBT_Connector" H 2900 11000 50  0001 C CNN
+F 3 "" H 2900 11000 50  0001 C CNN
+	1    2900 10200
+	1    0    0    -1  
+$EndComp
+$Comp
+L PJS:SM02B-PASS-TBT_Connector J2
+U 1 1 5FF1608E
+P 1400 10200
+F 0 "J2" H 1400 10515 50  0000 C CNN
+F 1 "SM02B-PASS-TBT_Connector" H 1400 10424 50  0000 C CNN
+F 2 "PJS:SM02B-PASS-TBT_Connector" H 1400 11000 50  0001 C CNN
+F 3 "" H 1400 11000 50  0001 C CNN
+	1    1400 10200
+	1    0    0    -1  
+$EndComp
+$Comp
+L PJS:SM02B-PASS-TBT_Connector J3
+U 1 1 5FF16A59
+P 1400 10800
+F 0 "J3" H 1400 11115 50  0000 C CNN
+F 1 "SM02B-PASS-TBT_Connector" H 1400 11024 50  0000 C CNN
+F 2 "PJS:SM02B-PASS-TBT_Connector" H 1400 11600 50  0001 C CNN
+F 3 "" H 1400 11600 50  0001 C CNN
+	1    1400 10800
+	1    0    0    -1  
+$EndComp
+$Comp
+L PJS:SM02B-PASS-TBT_Connector J5
+U 1 1 5FF1768B
+P 2900 10800
+F 0 "J5" H 2900 11115 50  0000 C CNN
+F 1 "SM02B-PASS-TBT_Connector" H 2900 11024 50  0000 C CNN
+F 2 "PJS:SM02B-PASS-TBT_Connector" H 2900 11600 50  0001 C CNN
+F 3 "" H 2900 11600 50  0001 C CNN
+	1    2900 10800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 3250 6450 3250
+$Comp
+L power:GND #PWR0121
+U 1 1 5FF0A3C2
+P 5950 3350
+F 0 "#PWR0121" H 5950 3100 50  0001 C CNN
+F 1 "GND" V 5955 3222 50  0000 R CNN
+F 2 "" H 5950 3350 50  0001 C CNN
+F 3 "" H 5950 3350 50  0001 C CNN
+	1    5950 3350
+	0    -1   -1   0   
+$EndComp
+Text Label 6450 5650 2    50   ~ 0
+S3_UAS
+$Comp
+L PJS:SM02B-PASS-TBT_SwitchConnector J6
+U 1 1 5FF52CF4
+P 5700 3300
+F 0 "J6" H 5700 3615 50  0000 C CNN
+F 1 "SM02B-PASS-TBT_SwitchConnector" H 5700 3524 50  0000 C CNN
+F 2 "PJS:SM02B-PASS-TBT_Connector" H 5700 4100 50  0001 C CNN
+F 3 "" H 5700 4100 50  0001 C CNN
+	1    5700 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L PJS:SM02B-PASS-TBT_SwitchConnector J9
+U 1 1 5FF66278
+P 5700 5100
+F 0 "J9" H 5700 5415 50  0000 C CNN
+F 1 "SM02B-PASS-TBT_SwitchConnector" H 5700 5324 50  0000 C CNN
+F 2 "PJS:SM02B-PASS-TBT_Connector" H 5700 5900 50  0001 C CNN
+F 3 "" H 5700 5900 50  0001 C CNN
+	1    5700 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L PJS:SM02B-PASS-TBT_SwitchConnector J10
+U 1 1 5FF6C1E4
+P 5700 5700
+F 0 "J10" H 5700 6015 50  0000 C CNN
+F 1 "SM02B-PASS-TBT_SwitchConnector" H 5700 5924 50  0000 C CNN
+F 2 "PJS:SM02B-PASS-TBT_Connector" H 5700 6500 50  0001 C CNN
+F 3 "" H 5700 6500 50  0001 C CNN
+	1    5700 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 5650 6450 5650
+$Comp
+L power:GND #PWR0123
+U 1 1 5FF19762
+P 5950 5750
+F 0 "#PWR0123" H 5950 5500 50  0001 C CNN
+F 1 "GND" V 5955 5622 50  0000 R CNN
+F 2 "" H 5950 5750 50  0001 C CNN
+F 3 "" H 5950 5750 50  0001 C CNN
+	1    5950 5750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7450 4450 6900 4450
+Wire Wire Line
+	10100 5550 9650 5550
+Wire Wire Line
+	9650 5450 10100 5450
+Wire Wire Line
+	9650 4050 10200 4050
+Wire Wire Line
+	9650 3950 10200 3950
+Wire Wire Line
+	9650 3750 10200 3750
+Wire Wire Line
+	9650 3650 10200 3650
+Wire Wire Line
+	9650 3550 10200 3550
+Wire Wire Line
+	9650 3450 10200 3450
+Wire Wire Line
+	9650 3350 10200 3350
+Text Label 6900 5150 0    50   ~ 0
+S2_Door
+Wire Wire Line
+	6900 5150 7450 5150
+$Comp
+L PJS:Teensy4.0 U2
 U 1 1 5FFF6DFD
 P 8550 4500
-F 0 "U?" H 8550 6115 50  0000 C CNN
+F 0 "U2" H 8550 6115 50  0000 C CNN
 F 1 "Teensy4.0" H 8550 6024 50  0000 C CNN
-F 2 "" H 8150 4700 50  0001 C CNN
+F 2 "PJS:Teensy4.0" H 8150 4700 50  0001 C CNN
 F 3 "" H 8150 4700 50  0001 C CNN
 	1    8550 4500
 	1    0    0    -1  
 $EndComp
+Text Label 6900 5250 0    50   ~ 0
+S3_UAS
+Wire Wire Line
+	7450 5250 6900 5250
+Wire Wire Line
+	6900 5050 7450 5050
+Text Label 6900 5050 0    50   ~ 0
+S1_Link
+Text Label 6900 4450 0    50   ~ 0
+Relay_Signal
+Wire Wire Line
+	6900 3450 7450 3450
+Text Label 6900 3450 0    50   ~ 0
+Link_DriverIN1
+Wire Wire Line
+	7450 3550 6900 3550
+Text Label 6900 3550 0    50   ~ 0
+Link_DriverIN2
+Wire Wire Line
+	7450 3650 6900 3650
+Text Label 6900 3650 0    50   ~ 0
+LockA_DriverIN1
+Wire Wire Line
+	7450 3750 6900 3750
+Text Label 6900 3750 0    50   ~ 0
+LockA_DriverIN2
+Wire Wire Line
+	7450 3850 6900 3850
+Text Label 6900 3850 0    50   ~ 0
+LockB_DriverIN1
+Wire Wire Line
+	7450 3950 6900 3950
+Text Label 6900 3950 0    50   ~ 0
+LockB_DriverIN2
 $EndSCHEMATC
