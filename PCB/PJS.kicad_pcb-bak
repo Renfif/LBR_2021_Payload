@@ -1599,7 +1599,7 @@
   )
 
   (module PJS:36-3034-ND_CoinCellHolder (layer F.Cu) (tedit 5FEDC451) (tstamp 5FF12729)
-    (at 155.6385 133.667499 180)
+    (at 157.4165 127.571499 180)
     (path /5FCA2E08)
     (fp_text reference BT1 (at 0 -8.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1910,7 +1910,7 @@
   )
 
   (module PJS:HFW8R-1STE1H1LF_FFC (layer F.Cu) (tedit 5FEDC61A) (tstamp 5FF1280E)
-    (at 155.702 95.567499 180)
+    (at 155.956 85.661499 180)
     (path /5FC972AB)
     (fp_text reference J1 (at 0 -6) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -2381,7 +2381,7 @@
   )
 
   (module PJS:Teensy4.0 (layer F.Cu) (tedit 5FC950F2) (tstamp 5FF13908)
-    (at 156.083 97.726499)
+    (at 156.591 96.964499)
     (path /5FFF6DFD)
     (fp_text reference U2 (at 0 -20) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.015)))
@@ -2463,7 +2463,7 @@
   )
 
   (module PJS:D24V22F5_VoltageRegulator (layer F.Cu) (tedit 5FEDC4D4) (tstamp 5FF129EE)
-    (at 130.81 69.786499 90)
+    (at 130.7465 66.484499 90)
     (path /5FCA09BF)
     (fp_text reference VR1 (at 0 -10.5 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -2588,7 +2588,7 @@
   )
 
   (module PJS:XT60_FemaleBatteryConnector (layer F.Cu) (tedit 5FC95B44) (tstamp 5FF12A3D)
-    (at 139.2555 46.926499)
+    (at 134.4295 47.370999)
     (descr "AMASS female XT60, through hole, vertical, https://www.tme.eu/Document/2d152ced3b7a446066e6c419d84bb460/XT60%20SPEC.pdf")
     (tags "XT60 female vertical")
     (path /5FF22EAF)
@@ -2631,7 +2631,7 @@
   )
 
   (module PJS:XT60_FemaleBatteryConnector (layer F.Cu) (tedit 5FC95B44) (tstamp 5FF12A56)
-    (at 113.665 47.180499)
+    (at 114.7445 47.434499)
     (descr "AMASS female XT60, through hole, vertical, https://www.tme.eu/Document/2d152ced3b7a446066e6c419d84bb460/XT60%20SPEC.pdf")
     (tags "XT60 female vertical")
     (path /5FF20F6C)
@@ -2674,7 +2674,7 @@
   )
 
   (module PJS:MicroSD_Slot (layer F.Cu) (tedit 5FEECB49) (tstamp 5FF12A7B)
-    (at 156.337 64.452499 180)
+    (at 156.21 61.975999 180)
     (path /5FC9CA50)
     (fp_text reference XM1 (at -8.64903 3.58082 180) (layer F.SilkS)
       (effects (font (size 1.001622 1.001622) (thickness 0.015)))

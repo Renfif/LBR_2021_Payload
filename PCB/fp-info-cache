@@ -1,4 +1,4 @@
-19021514907926562
+19059849143214287
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -59717,6 +59717,13 @@ Resistor footprint for DRV8871 Motor Driver
 2
 2
 PJS
+B02P-VL_MotorConnector
+
+
+0
+2
+2
+PJS
 BMP388_Altimeter
 
 
@@ -59795,6 +59802,13 @@ RMCF2512FT2K00_Resistor
 2
 PJS
 SM02B-PASS-TBT_Connector
+
+
+0
+4
+4
+PJS
+SM02B-PASS-TBT_SwitchConnector
 
 
 0
