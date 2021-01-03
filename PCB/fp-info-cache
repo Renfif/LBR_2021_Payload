@@ -1,146 +1,69 @@
-33799724320258
-PJS
-1SS351-TB-E_Diode
-
-
-0
-3
-3
-PJS
-36-3034-ND_CoinCellHolder
-
-
-0
-3
-2
-PJS
-0402_Resistor
-Resistor footprint for DRV8871 Motor Driver
-
-0
-2
-2
-PJS
-B02P-VL_MotorConnector
-
-
-0
-2
-2
-PJS
-BMP388_Altimeter
-
-
-0
-10
-9
-PJS
-CL05B104KO5NNNC_Capacitor
-0.1µF
-
-0
-2
-2
-PJS
-D24V22F5_VoltageRegulator
-
-
+16040847901407
+Connector_AMASS
+AMASS_MR30PW-FB_1x03_P3.50mm_Horizontal
+Connector XT30 Horizontal PCB Female, https://www.tme.eu/en/Document/5e47640ba39fa492dbd4c0f4c8ae7b93/MR30PW%20SPEC.pdf
+RC Connector XT30
 0
 5
+3
+Connector_AMASS
+AMASS_MR30PW-M_1x03_P3.50mm_Horizontal
+Connector XT30 Horizontal PCB Male, https://www.tme.eu/en/Document/5e47640ba39fa492dbd4c0f4c8ae7b93/MR30PW%20SPEC.pdf
+RC Connector XT30
+0
 5
-PJS
-DRV8871_MotorDriver
-
-
-0
-9
-9
-PJS
-EEE-1CA470SP_Capacitor
-47µf Capacitor
-
-0
-2
-2
-PJS
-G2R-2-DC5_Relay
-
-
-0
-9
-7
-PJS
-HFW8R-1STE1H1LF_FFC
-
-
-0
-10
-8
-PJS
-JST_2Pin
-
-
-0
-2
-2
-PJS
-MMBT2222A_Transistor
-
-
-0
 3
-3
-PJS
-MicroSD_Slot
-
-
+Connector_AMASS
+AMASS_XT30PW-F_1x02_P2.50mm_Horizontal
+Connector XT30 Horizontal PCB Female, https://www.tme.eu/en/Document/ce4077e36b79046da520ca73227e15de/XT30PW%20SPEC.pdf
+RC Connector XT30
 0
-15
-9
-PJS
-RMCF2512FT2K00_Resistor
-2k
-
-0
+4
 2
+Connector_AMASS
+AMASS_XT30PW-M_1x02_P2.50mm_Horizontal
+Connector XT30 Horizontal PCB Male, https://www.tme.eu/en/Document/ce4077e36b79046da520ca73227e15de/XT30PW%20SPEC.pdf
+RC Connector XT30
+0
+4
 2
-PJS
-SM02B-PASS-TBT_Connector
-
-
-0
-4
-4
-PJS
-SM02B-PASS-TBT_SwitchConnector
-
-
-0
-4
-4
-PJS
-TBS_Crossfire_RF_Receiver
-
-
-0
-14
-14
-PJS
-Teensy4.0
-
-
-0
-33
-33
-PJS
-XT30_Female_MotorConnector
+Connector_AMASS
+AMASS_XT30U-F_1x02_P5.0mm_Vertical
 Connector XT30 Vertical Cable Female, https://www.tme.eu/en/Document/3cbfa5cfa544d79584972dd5234a409e/XT30U%20SPEC.pdf
 RC Connector XT30
 0
 2
 2
-PJS
-XT60_FemaleBatteryConnector
+Connector_AMASS
+AMASS_XT30U-M_1x02_P5.0mm_Vertical
+Connector XT30 Vertical Cable Male, https://www.tme.eu/en/Document/3cbfa5cfa544d79584972dd5234a409e/XT30U%20SPEC.pdf
+RC Connector XT30
+0
+2
+2
+Connector_AMASS
+AMASS_XT30UPB-F_1x02_P5.0mm_Vertical
+Connector XT30 Vertical PCB Female, https://www.tme.eu/en/Document/4acc913878197f8c2e30d4b8cdc47230/XT30UPB%20SPEC.pdf
+RC Connector XT30
+0
+2
+2
+Connector_AMASS
+AMASS_XT30UPB-M_1x02_P5.0mm_Vertical
+Connector XT30 Vertical PCB Male, https://www.tme.eu/en/Document/4acc913878197f8c2e30d4b8cdc47230/XT30UPB%20SPEC.pdf
+RC Connector XT30
+0
+2
+2
+Connector_AMASS
+AMASS_XT60-F_1x02_P7.20mm_Vertical
+AMASS female XT60, through hole, vertical, https://www.tme.eu/Document/2d152ced3b7a446066e6c419d84bb460/XT60%20SPEC.pdf
+XT60 female vertical
+0
+2
+2
+Connector_AMASS
+AMASS_XT60-M_1x02_P7.20mm_Vertical
 AMASS female XT60, through hole, vertical, https://www.tme.eu/Document/2d152ced3b7a446066e6c419d84bb460/XT60%20SPEC.pdf
 XT60 female vertical
 0
