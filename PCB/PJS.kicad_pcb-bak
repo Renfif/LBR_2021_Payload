@@ -485,8 +485,8 @@
       (net 2 +12V))
     (pad 5 thru_hole circle (at 12.5 -3.75 90) (size 0.8 0.8) (drill 0.4) (layers *.Cu *.Mask)
       (net 47 /Door_RelayOut1))
-    (model "${KIPRJMOD}/Models/Omron G2R2 v1.step"
-      (offset (xyz -14.75 -6.4 3.75))
+    (model "${KIPRJMOD}/Models/OMRON G2R-2 RELAY v1.step"
+      (offset (xyz -14.725 -6.4 3.75))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
     )
