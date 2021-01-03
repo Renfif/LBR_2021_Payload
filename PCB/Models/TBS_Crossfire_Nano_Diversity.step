@@ -12,7 +12,7 @@ FILE_NAME(
 /* name */ 
 'C:/Users/raidr/Documents/Programming/LBR/LBR_2021_Payload/PCB/Models/
 TBS_Crossfire_Nano_Diversity.step',
-/* time_stamp */ '2021-01-02T19:23:16-08:00',
+/* time_stamp */ '2021-01-02T20:19:10-08:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v18.1',
@@ -60858,10 +60858,10 @@ SOLID_ANGLE_UNIT()
 #55058=SHAPE_REPRESENTATION('',(#34208),#54973);
 #55059=PRODUCT_DEFINITION_CONTEXT('part definition',#55106,'design');
 #55060=PRODUCT_DEFINITION('TBS_Crossfire_Nano_Diversity',
-'TBS_Crossfire_Nano_Diversity v15',#55075,#55059);
+'TBS_Crossfire_Nano_Diversity v16',#55075,#55059);
 #55061=PRODUCT_DEFINITION('Antenna Connector DBV',
 'Antenna Connector DBV v1',#55076,#55059);
-#55062=PRODUCT_DEFINITION('Pin Header 1x6 TH Pitch 2.54mm',
+#55062=PRODUCT_DEFINITION('Pin Header 1x6 TH Pitch 2.54mm v3',
 'Pin Header 1x6 TH Pitch 2.54mm v3',#55077,#55059);
 #55063=PRODUCT_DEFINITION('2PH1-8-UA','2PH1-8-UA v2',#55078,#55059);
 #55064=PRODUCT_DEFINITION('SOT-23-6','SOT-23-6 v1',#55079,#55059);
@@ -60893,7 +60893,7 @@ SOLID_ANGLE_UNIT()
 #55088=PRODUCT_DEFINITION_FORMATION('',$,#55121);
 #55089=PRODUCT_DEFINITION_FORMATION('',$,#55122);
 #55090=PRODUCT_RELATED_PRODUCT_CATEGORY(
-'TBS_Crossfire_Nano_Diversity v15','TBS_Crossfire_Nano_Diversity v15',(#55108));
+'TBS_Crossfire_Nano_Diversity v16','TBS_Crossfire_Nano_Diversity v16',(#55108));
 #55091=PRODUCT_RELATED_PRODUCT_CATEGORY('Antenna Connector DBV v1',
 'Antenna Connector DBV v1',(#55109));
 #55092=PRODUCT_RELATED_PRODUCT_CATEGORY(
@@ -60919,9 +60919,9 @@ SOLID_ANGLE_UNIT()
 'Core Data for Automotive Mechanical Design Process');
 #55107=PRODUCT_CONTEXT('part definition',#55106,'mechanical');
 #55108=PRODUCT('TBS_Crossfire_Nano_Diversity',
-'TBS_Crossfire_Nano_Diversity v15',$,(#55107));
+'TBS_Crossfire_Nano_Diversity v16',$,(#55107));
 #55109=PRODUCT('Antenna Connector DBV','Antenna Connector DBV v1',$,(#55107));
-#55110=PRODUCT('Pin Header 1x6 TH Pitch 2.54mm',
+#55110=PRODUCT('Pin Header 1x6 TH Pitch 2.54mm v3',
 'Pin Header 1x6 TH Pitch 2.54mm v3',$,(#55107));
 #55111=PRODUCT('2PH1-8-UA','2PH1-8-UA v2',$,(#55107));
 #55112=PRODUCT('SOT-23-6','SOT-23-6 v1',$,(#55107));
