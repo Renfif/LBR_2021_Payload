@@ -22,7 +22,12 @@
 #define RF_CH5 13
 #define RF_CH6 14
 
-//Altimeter pins - Ifeoma add whatever you need 
+//Altimeter pins 
+#define BMP_SCK 13
+#define BMP_MISO 12
+#define BMP_MOSI 11
+#define BMP_CS 10
+
 #define Alt_SDI 18
 #define Alt_SCK 19
 
