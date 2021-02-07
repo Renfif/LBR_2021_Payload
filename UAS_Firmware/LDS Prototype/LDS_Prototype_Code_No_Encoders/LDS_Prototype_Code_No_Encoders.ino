@@ -19,8 +19,8 @@
 //pid settings and gains
 #define OUTPUT_MIN 0
 #define OUTPUT_MAX 255
-#define KP .12
-#define KI .0003
+#define KP 0
+#define KI 0
 #define KD 0
 
 //deadzone for reciever value
@@ -105,6 +105,8 @@ void loop() {
 //    digitalWrite(MotorPin4B, LOW);
 //    delay(5000);
 //  }
+
+  
 }
 
 int pulseToPWM(int pulse){
@@ -168,4 +170,8 @@ void printEvent(sensors_event_t* event) {
   Serial.print(y);
   Serial.print(" |\tz= ");
   Serial.println(z);
+}
+
+void levelingWithPID(){
+    
 }
