@@ -15,11 +15,12 @@
 #define MotorPin4B 6
 //no encoders connected
 #define ReceiverPin1 23
-
+#define ReceiverPin2 13
+#define ReceiverPin3 14
 //pid settings and gains
 #define OUTPUT_MIN 0
 #define OUTPUT_MAX 255
-#define KP 0
+#define KP .1
 #define KI 0
 #define KD 0
 
@@ -36,6 +37,8 @@ void setup() {
   Serial.begin(115200);
   
   pinMode(ReceiverPin1, INPUT);
+  pinMode(ReceiverPin2, INPUT);
+  pinMode(ReceiverPin3, INPUT);
   pinMode(MotorPin1A, OUTPUT);
   pinMode(MotorPin1B, OUTPUT);
   pinMode(MotorPin2A, OUTPUT);
@@ -60,6 +63,11 @@ void setup() {
     Serial.print("Ooops, no BNO055 detected ... Check your wiring or I2C ADDR!");
     while (1);
   }
+  bno.setExtCrystalUse(true);
+  
+  //define I/O variables and settings!
+  AutoPID LegPID = AutoPID();
+  
 }
 
 void loop() {
@@ -73,11 +81,15 @@ void loop() {
   
   //convert reciever input to PWM value
   int Ch1=pulseIn(ReceiverPin1,HIGH,25000);
+  int Ch2=pulseIn(ReceiverPin2,HIGH,25000);
+  int Ch3=pulseIn(ReceiverPin3,HIGH,25000);
   Ch1=pulseToPWM(Ch1);
-  Serial.println("Receiver Value: ");
-  Serial.println(Ch1);
+  Ch2=pulseToPWM(Ch2);
+  Ch3=pulseToPWM(Ch3);
+  //Serial.println("Receiver Value: ");
+  //Serial.println(Ch1);
   
-  //leg movement test
+  //leg movement cycle test
 //  while(Ch1>254){
 //    digitalWrite(MotorPin1A, HIGH);
 //    delay(3000);
