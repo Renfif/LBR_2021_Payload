@@ -49,7 +49,7 @@ void deployment(Time, switch1_Link, switch2_Link, switch3_DoorLock, switch4_UAS)
 
   //if Switch1_Link is clicked and Switch2_LInk is unclicked (door closed), lock door
   if(Switch1_Link == HIGH && Switch2_Link == LOW) { 
-    lockDoor()
+    lockDoor(lockTime)
     }
  
 }
@@ -87,10 +87,10 @@ void lockDoor(lockTime) {
       analogWrite(LockA_DriverIN2, i);
       analogWrite(LockB_DriverIN1, i); 
       analogWrite(LockB_DriverIN2, 0);
-      delay(1); 
+      delay(3.9); 
   }
   
-  for(int i = 0; i < lockTime; i++) { //drives motors for lockTime seconds
+  for(int i = 0; i < (lockTime - 1); i++) { //drives motors for lockTime seconds
       analogWrite(LockA_DriverIN1, 0); 
       analogWrite(LockA_DriverIN2, 255);
       analogWrite(LockB_DriverIN1, 255); 

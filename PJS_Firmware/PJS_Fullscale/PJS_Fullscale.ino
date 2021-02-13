@@ -1,4 +1,3 @@
-//https://create.arduino.cc/projecthub/electropeak/sd-card-module-with-arduino-how-to-read-write-data-37f390
 
 #include <PJS_FullscaleFunctions.h>
 #include <Wire.h> 
@@ -7,10 +6,10 @@
 
 
 //Switch pins
-#define Switch1_Link __      // (x1) when clicked the linkage folded, when unclicked the linkage is extended
-#define Switch2_Link __      // (x1) when clicked the linkage is unfolded, when unclicked the linkage is not extended
-#define Switch3_DoorLock __  // (x2) when the limit switch is clicked that means door is unlocked (though cannot do a check for locking)
-#define Switch4_UAS __       // (x1) when unclicked PJS is deployed, when clicked PJS is inserted
+#define Switch1_Link 21      // (x1) when clicked the linkage folded, when unclicked the linkage is extended
+#define Switch2_Link 20      // (x1) when clicked the linkage is unfolded, when unclicked the linkage is not extended
+#define Switch3_DoorLock 22  // (x2) when the limit switch is clicked that means door is unlocked (though cannot do a check for locking)
+#define Switch4_UAS 23       // (x1) when unclicked PJS is deployed, when clicked PJS is inserted
 
 
 //Driver pins
@@ -22,7 +21,6 @@
 #define LockA_DriverIN2 5
 #define LockB_DriverIN1 6
 #define LockB_DriverIN2 7
-#define Relay_Signal 12
 
 
 //RF Receiver pins
@@ -92,7 +90,6 @@ void loop() {
   Ch6 = receive(receiver6) //uas deploy uas insert
 
   //if arming switch is on, execute the following
-
   if(Ch1 > 200) { 
     
     if(Ch2 > 200)&&(altitude > 550)&&(altitude < 650)&&(velocity < 30){ 
