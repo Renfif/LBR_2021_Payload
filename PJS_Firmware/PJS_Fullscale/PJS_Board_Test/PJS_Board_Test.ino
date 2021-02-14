@@ -49,19 +49,20 @@ void setup() {
 void loop() {
   int Ch1= pulseIn(ReceiverIn1, HIGH, 25000);
   Ch1 = pulseToPWM(Ch1);
+  int switchState = digitalRead(LimitSwitchA);
   Serial.print("Altitude: ");
   Serial.println(bmp.readAltitude(SEALEVELPRESSURE_HPA));
   Serial.print("Rec Channel 1: ");
   Serial.println(Ch1);
   Serial.print("Limit Switch Is: ");
-    if(digitalRead(LimitSwitchA) == LOW){
+    if(switchState == LOW){
       Serial.println("on");
     }else{
       Serial.println("off");
     }
   
   if (Ch1>0){
-    if(digitalRead(LimitSwitchA == LOW) && (bmp.readAltitude(SEALEVELPRESSURE_HPA))<15){    
+    if(switchState == LOW && (bmp.readAltitude(SEALEVELPRESSURE_HPA))<15){    
       Serial.println("Going Forward...");
       rampMotor(1, MotorPin1A);
     }
@@ -70,7 +71,7 @@ void loop() {
     }
   }
   else if(Ch1<0){
-    if(digitalRead(LimitSwitchA == LOW) && (bmp.readAltitude(SEALEVELPRESSURE_HPA))<15){    
+    if(switchState == LOW && (bmp.readAltitude(SEALEVELPRESSURE_HPA))<15){    
       Serial.println("Going Backward...");
       rampMotor(1, MotorPin1B);
     }

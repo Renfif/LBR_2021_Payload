@@ -24,8 +24,13 @@
 #define KI 0
 #define KD 0
 
-//deadzone for reciever value
+//deadzone for receiver value
 const int deadzone = 20;
+
+//PID IO and Setpoint variables
+int Input = 0
+int Output = 0
+int Setpoint = 0
 
 // Set the delay between fresh samples
 uint16_t BNO055_SAMPLERATE_DELAY_MS = 100;
@@ -66,7 +71,8 @@ void setup() {
   bno.setExtCrystalUse(true);
   
   //define I/O variables and settings!
-  AutoPID LegPID = AutoPID();
+  AutoPID LegPID = AutoPID(Input, Setpoint, Output, OUTPUT_MIN , OUTPUT_MAX, KP, KI, KD);
+  LegPID.
   
 }
 
@@ -74,7 +80,7 @@ void loop() {
   //gather and print IMU data with given calibration values and delay
   sensors_event_t orientationData;
   bno.getEvent(&orientationData, Adafruit_BNO055::VECTOR_EULER);
-  //printEvent(&orientationData);
+  printEvent(&orientationData);
   uint8_t system, gyro, accel, mag = 0;
   bno.getCalibration(&system, &gyro, &accel, &mag);
   delay(BNO055_SAMPLERATE_DELAY_MS);
@@ -86,6 +92,7 @@ void loop() {
   Ch1=pulseToPWM(Ch1);
   Ch2=pulseToPWM(Ch2);
   Ch3=pulseToPWM(Ch3);
+  //print test
   //Serial.println("Receiver Value: ");
   //Serial.println(Ch1);
   
