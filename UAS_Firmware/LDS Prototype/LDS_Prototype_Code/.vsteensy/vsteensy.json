@@ -1,0 +1,35 @@
+{
+  "version": "1",
+  "target": "vsCode",
+  "buildSystem": "makefile",
+  "debugSupport": "none",
+  "configurations": [
+    {
+      "name": "default",
+      "guid": "e11d8a63-7ccd-4c70-b4eb-8bfba02635a6",
+      "setupType": "quick",
+      "coreBase": "C:\\Program Files (x86)\\Arduino\\hardware\\teensy\\avr",
+      "compilerBase": "C:\\Program Files (x86)\\Arduino\\hardware\\tools\\arm",
+      "makefileExtension": null,
+      "copyCore": false,
+      "sharedLibraries": [
+        "AutoPID",
+        "Adafruit_Unified_Sensor",
+        "Adafruit_BNO055",
+        "Adafruit_BusIO"
+      ],
+      "projectLibraries": [
+        "Wire"
+      ],
+      "board": {
+        "name": "Teensy 4.0",
+        "options": {
+          "USB Type": "Serial",
+          "CPU Speed": "600 MHz",
+          "Optimize": "Faster",
+          "Keyboard Layout": "US English"
+        }
+      }
+    }
+  ]
+}
