@@ -58,6 +58,8 @@ void setup() {
   bmp.setIIRFilterCoeff(BMP3_IIR_FILTER_COEFF_3);
   bmp.setOutputDataRate(BMP3_ODR_50_HZ);
 
+  int loopCheck = 0; 
+
   pinMode(UAS_DriverIN1, OUTPUT);
   pinMode(UAS_DriverIN2, OUTPUT);
   pinMode(Link_DriverIN1, OUTPUT);
@@ -68,6 +70,7 @@ void setup() {
   pinMode(LockB_DriverIN2, OUTPUT);
 }
 
+File dataFile = SD.open("datalog.txt", FILE_WRITE)
 
 void loop() {
 
@@ -90,7 +93,12 @@ void loop() {
   Ch6 = receive(receiver6) //uas deploy uas insert
 
   //if arming switch is on, execute the following
+  
+  
+  
   if(Ch1 > 200) { 
+
+    loopCheck = 1;
     
     if(Ch2 > 200)&&(altitude > 550)&&(altitude < 650)&&(velocity < 30){ 
       deployment(Time, switch1_Link, switch2_Link, switch3_DoorLock, switch4_UAS)
@@ -101,29 +109,63 @@ void loop() {
     } 
 
     if(Ch4 > 200) { 
+      String dataString = "Unlocking door...  ";
+      dataLogging(dataFile, dataString, altitude, velocity, Time);
       unlockDoor()
+      String dataString = "Door unlocked.     ";
+      dataLogging(dataFile, dataString, altitude, velocity, Time);
+      
     }
 
     else if (Ch4 < 200) {
+      String dataString = "Locking door...    "; 
+      dataLogging(dataFile, dataString, altitude, velocity, Time);
       lockDoor()
+      String dataString = "Door locked.       "; 
+      dataLogging(dataFile, dataString, altitude, velocity, Time);
+
     }
 
     if(Ch5 > 200) { 
+      String dataString = "Opening Door...    "; 
+      dataLogging(dataFile, dataString, altitude, velocity, Time);
       openDoor()
+      String dataString = "Door opened.       "; 
+      dataLogging(dataFile, dataString, altitude, velocity, Time);
+
     }
 
     else if (Ch5 < 200) { 
+      String dataString = "Closing door...    ";
+      dataLogging(dataFile, dataString, altitude, velocity, Time);
       closeDoor()
+      String dataString = "Door closed.       ";
+      dataLogging(dataFile, dataString, altitude, velocity, Time);
     }
 
     if(Ch6 > 200) { 
+      String dataString = "Deploying UAS...   ";
+      dataLogging(dataFile, dataString, altitude, velocity, Time);
       deployUAS() 
+      String dataString = "UAS deployed.      ";
+      dataLogging(dataFile, dataString, altitude, velocity, Time);
     }
 
     else if(Ch6 < 200) { 
+      String dataString = "Installing UAS...  ";
+      dataLogging(dataFile, dataString, altitude, velocity, Time);
       installUAS()
+      String dataString = "UAS installed.     ";
+      dataLogging(dataFile, dataString, altitude, velocity, Time);
     }
     
   }
-  
+
+  else if(loopCheck == 1) { 
+    dataFile.close();
+  }
+ 
 }
+
+
+  
