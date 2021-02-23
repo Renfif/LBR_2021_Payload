@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name UAS)(type KiCad)(uri ${KIPRJMOD}/UAS.pretty)(options "")(descr ""))
+)
