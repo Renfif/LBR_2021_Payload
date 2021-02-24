@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# UAS-rescue_12V-StepUp-Converter-UAS-cache
+# 12V-StepUp-Converter-UAS-cache
 #
-DEF UAS-rescue_12V-StepUp-Converter-UAS-cache U 0 40 Y Y 1 F N
+DEF 12V-StepUp-Converter-UAS-cache U 0 40 Y Y 1 F N
 F0 "U" 0 100 50 H V C CNN
-F1 "UAS-rescue_12V-StepUp-Converter-UAS-cache" 0 0 50 H V C CNN
+F1 "12V-StepUp-Converter-UAS-cache" 0 0 50 H V C CNN
 F2 "" 0 100 50 H I C CNN
 F3 "" 0 100 50 H I C CNN
 DRAW
@@ -16,11 +16,11 @@ X VOUT 3 350 -200 100 L 51 51 1 1 O
 ENDDRAW
 ENDDEF
 #
-# UAS-rescue_500mA-5V-Converter-UAS-cache
+# 500mA-5V-Converter-UAS-cache
 #
-DEF UAS-rescue_500mA-5V-Converter-UAS-cache U 0 40 Y Y 1 F N
+DEF 500mA-5V-Converter-UAS-cache U 0 40 Y Y 1 F N
 F0 "U" 0 100 50 H V C CNN
-F1 "UAS-rescue_500mA-5V-Converter-UAS-cache" 0 0 50 H V C CNN
+F1 "500mA-5V-Converter-UAS-cache" 0 0 50 H V C CNN
 F2 "" 0 100 50 H I C CNN
 F3 "" 0 100 50 H I C CNN
 DRAW
@@ -32,11 +32,11 @@ X SHDN 4 300 -250 100 L 50 31 1 1 I
 ENDDRAW
 ENDDEF
 #
-# UAS-rescue_5A-5V-Converter-UAS-cache
+# 5A-5V-Converter-UAS-cache
 #
-DEF UAS-rescue_5A-5V-Converter-UAS-cache U 0 40 Y Y 1 F N
+DEF 5A-5V-Converter-UAS-cache U 0 40 Y Y 1 F N
 F0 "U" 0 0 50 H V C CNN
-F1 "UAS-rescue_5A-5V-Converter-UAS-cache" 0 0 50 H V C CNN
+F1 "5A-5V-Converter-UAS-cache" 0 0 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -49,11 +49,11 @@ X VOUT 5 -350 -150 100 R 50 50 1 1 O
 ENDDRAW
 ENDDEF
 #
-# UAS-rescue_7.5V-2.4A-Converter-UAS-cache
+# 7.5V-2.4A-Converter-UAS-cache
 #
-DEF UAS-rescue_7.5V-2.4A-Converter-UAS-cache U 0 40 Y Y 1 F N
+DEF 7.5V-2.4A-Converter-UAS-cache U 0 40 Y Y 1 F N
 F0 "U" 0 100 50 H V C CNN
-F1 "UAS-rescue_7.5V-2.4A-Converter-UAS-cache" 0 0 50 H V C CNN
+F1 "7.5V-2.4A-Converter-UAS-cache" 0 0 50 H V C CNN
 F2 "" 0 100 50 H I C CNN
 F3 "" 0 100 50 H I C CNN
 DRAW
@@ -66,11 +66,11 @@ X VOUT 5 300 -250 100 L 31 31 1 1 O
 ENDDRAW
 ENDDEF
 #
-# UAS-rescue_JST-3-Pin-UAS-cache
+# JST-3-Pin-UAS-cache
 #
-DEF UAS-rescue_JST-3-Pin-UAS-cache U 0 40 Y Y 1 F N
+DEF JST-3-Pin-UAS-cache U 0 40 Y Y 1 F N
 F0 "U" 0 100 50 H V C CNN
-F1 "UAS-rescue_JST-3-Pin-UAS-cache" 0 0 50 H V C CNN
+F1 "JST-3-Pin-UAS-cache" 0 0 50 H V C CNN
 F2 "" 0 100 50 H I C CNN
 F3 "" 0 100 50 H I C CNN
 DRAW
@@ -81,11 +81,11 @@ X 3 3 -200 -200 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# UAS-rescue_JST-4-Pin-UAS-cache
+# JST-4-Pin-UAS-cache
 #
-DEF UAS-rescue_JST-4-Pin-UAS-cache U 0 40 Y Y 1 F N
+DEF JST-4-Pin-UAS-cache U 0 40 Y Y 1 F N
 F0 "U" 0 100 50 H V C CNN
-F1 "UAS-rescue_JST-4-Pin-UAS-cache" 0 0 50 H V C CNN
+F1 "JST-4-Pin-UAS-cache" 0 0 50 H V C CNN
 F2 "" 0 100 50 H I C CNN
 F3 "" 0 100 50 H I C CNN
 DRAW
@@ -97,11 +97,11 @@ X 4 4 -200 -250 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# UAS-rescue_JST-7-Pin-UAS-cache
+# JST-7-Pin-UAS-cache
 #
-DEF UAS-rescue_JST-7-Pin-UAS-cache U 0 40 Y Y 1 F N
+DEF JST-7-Pin-UAS-cache U 0 40 Y Y 1 F N
 F0 "U" 0 100 50 H V C CNN
-F1 "UAS-rescue_JST-7-Pin-UAS-cache" 0 0 50 H V C CNN
+F1 "JST-7-Pin-UAS-cache" 0 0 50 H V C CNN
 F2 "" 0 100 50 H I C CNN
 F3 "" 0 100 50 H I C CNN
 DRAW
@@ -116,11 +116,11 @@ X 7 7 -200 -450 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# UAS-rescue_SM02B-PASS-TBT(LF)(SN)-SM02B-PASS-TBT_LF__SN_
+# SM02B-PASS-TBT(LF)(SN)-SM02B-PASS-TBT_LF__SN_
 #
-DEF UAS-rescue_SM02B-PASS-TBT(LF)(SN)-SM02B-PASS-TBT_LF__SN_ J 0 40 Y Y 1 L N
+DEF SM02B-PASS-TBT(LF)(SN)-SM02B-PASS-TBT_LF__SN_ J 0 40 Y Y 1 L N
 F0 "J" -200 225 50 H V L BNN
-F1 "UAS-rescue_SM02B-PASS-TBT(LF)(SN)-SM02B-PASS-TBT_LF__SN_" -200 -400 50 H V L BNN
+F1 "SM02B-PASS-TBT(LF)(SN)-SM02B-PASS-TBT_LF__SN_" -200 -400 50 H V L BNN
 F2 "JST_SM02B-PASS-TBT(LF)(SN)" 0 0 50 H I L BNN
 F3 "" 0 0 50 H I L BNN
 F4 "N/A" 0 0 50 H I L BNN "PARTREV"
@@ -136,11 +136,11 @@ X SHIELD S2 -300 -200 100 R 40 40 0 0 P
 ENDDRAW
 ENDDEF
 #
-# UAS-rescue_TB6612FNG-Dual-Motor-Driver-UAS-cache
+# TB6612FNG-Dual-Motor-Driver-UAS-cache
 #
-DEF UAS-rescue_TB6612FNG-Dual-Motor-Driver-UAS-cache U 0 40 Y Y 1 F N
+DEF TB6612FNG-Dual-Motor-Driver-UAS-cache U 0 40 Y Y 1 F N
 F0 "U" 0 100 50 H V C CNN
-F1 "UAS-rescue_TB6612FNG-Dual-Motor-Driver-UAS-cache" 0 0 50 H V C CNN
+F1 "TB6612FNG-Dual-Motor-Driver-UAS-cache" 0 0 50 H V C CNN
 F2 "" 0 100 50 H I C CNN
 F3 "" 0 100 50 H I C CNN
 DRAW
