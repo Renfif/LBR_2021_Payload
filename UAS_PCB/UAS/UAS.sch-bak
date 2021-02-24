@@ -85,7 +85,7 @@ F 3 "" H 6100 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L UAS-rescue:JST-3-Pin-UAS-cache U?
+L UAS-cache:JST-3-Pin U?
 U 1 1 6035FF82
 P 4150 2900
 F 0 "U?" H 4150 2975 50  0000 C CNN
@@ -96,7 +96,7 @@ F 3 "" H 4150 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L UAS-rescue:JST-4-Pin-UAS-cache U?
+L UAS-cache:JST-4-Pin U?
 U 1 1 60360427
 P 4900 3150
 F 0 "U?" H 4900 3225 50  0000 C CNN
@@ -107,7 +107,7 @@ F 3 "" H 4900 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L UAS-rescue:JST-7-Pin-UAS-cache U?
+L UAS-cache:JST-7-Pin U?
 U 1 1 6036088A
 P 4450 3850
 F 0 "U?" H 4450 3925 50  0000 C CNN

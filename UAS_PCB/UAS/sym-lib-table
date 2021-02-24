@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name UAS-cache)(type Legacy)(uri ${KIPRJMOD}/UAS-cache.lib)(options "")(descr ""))
+  (lib (name 2851)(type Legacy)(uri ${KIPRJMOD}/2851.lib)(options "")(descr ""))
+  (lib (name SM02B-PASS-TBT_LF__SN_)(type Legacy)(uri ${KIPRJMOD}/SM02B-PASS-TBT_LF__SN_.lib)(options "")(descr ""))
+  (lib (name eec)(type Legacy)(uri ${KIPRJMOD}/Symbols/eec.lib)(options "")(descr ""))
+  (lib (name UAS-rescue)(type Legacy)(uri ${KIPRJMOD}/UAS-rescue.lib)(options "")(descr ""))
+)

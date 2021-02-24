@@ -1,8 +1,8 @@
-(kicad_pcb (version 20171130) (host pcbnew "(5.1.2-201-g3c8f901a1)")
+(kicad_pcb (version 20171130) (host pcbnew "(5.1.8)-1")
 
   (general
     (thickness 1.6002)
-    (drawings 0)
+    (drawings 12)
     (tracks 0)
     (zones 0)
     (modules 0)
@@ -16,13 +16,11 @@
 
   (layers
     (0 Front signal)
-    (1 In1.Cu signal)
-    (2 In2.Cu signal)
     (31 Back signal)
-    (34 B.Paste user hide)
+    (34 B.Paste user)
     (35 F.Paste user)
     (36 B.SilkS user)
-    (37 F.SilkS user hide)
+    (37 F.SilkS user)
     (38 B.Mask user)
     (39 F.Mask user)
     (44 Edge.Cuts user)
@@ -65,7 +63,7 @@
     (pad_to_mask_clearance 0)
     (solder_mask_min_width 0.12)
     (aux_axis_origin 0 0)
-    (visible_elements FEFFFF7F)
+    (visible_elements 7FFFFFFF)
     (pcbplotparams
       (layerselection 0x010fc_ffffffff)
       (usegerberextensions false)
@@ -107,5 +105,18 @@
     (diff_pair_width 0.1524)
     (diff_pair_gap 0.254)
   )
+
+  (gr_line (start 165.719999 80.790001) (end 120.000001 80.790001) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 168.259999 110) (end 168.26 83.330001) (layer Edge.Cuts) (width 0.1))
+  (gr_arc (start 165.72 109.999999) (end 165.719999 112.539999) (angle -90) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 117.46 83.330001) (end 117.460001 109.999999) (layer Edge.Cuts) (width 0.1))
+  (gr_arc (start 120 83.33) (end 120.000001 80.790001) (angle -90) (layer Edge.Cuts) (width 0.1))
+  (gr_arc (start 165.72 83.33) (end 168.26 83.330001) (angle -90) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 120.000001 112.539999) (end 165.719999 112.539999) (layer Edge.Cuts) (width 0.1))
+  (gr_arc (start 120 110) (end 117.460001 109.999999) (angle -90) (layer Edge.Cuts) (width 0.1))
+  (gr_circle (center 165.72 83.33) (end 166.72 83.33) (layer Edge.Cuts) (width 0.1))
+  (gr_circle (center 165.72 110) (end 166.72 110) (layer Edge.Cuts) (width 0.1))
+  (gr_circle (center 120 83.33) (end 121 83.33) (layer Edge.Cuts) (width 0.1))
+  (gr_circle (center 120 110) (end 121 110) (layer Edge.Cuts) (width 0.1))
 
 )
