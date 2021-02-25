@@ -1,4 +1,4 @@
-19053458620860687
+19056687242193393
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -82257,12 +82257,33 @@ transformer flyback
 10
 10
 UAS
+JST-SM03B-PASS-TBTLFSN-0-0-MFG
+
+
+0
+5
+5
+UAS
 JST_SM02B-PASS-TBT(LF)(SN)
 
 
 0
 4
 4
+UAS
+JST_SM03B-PASS-TBT(LF)(SN)
+
+
+0
+5
+5
+UAS
+JST_SM07B-PASS-TBT(LF)(SN)
+
+
+0
+9
+9
 UAS
 MODULE_DEV-15583
 
