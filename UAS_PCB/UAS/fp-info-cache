@@ -1,4 +1,4 @@
-19056687242193393
+19063144272211056
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -82257,6 +82257,20 @@ transformer flyback
 10
 10
 UAS
+16_Pad_Set_2mm_pitch
+
+
+0
+16
+16
+UAS
+Individual_Solder_Pad
+
+
+0
+0
+0
+UAS
 JST-SM03B-PASS-TBTLFSN-0-0-MFG
 
 
@@ -82284,6 +82298,20 @@ JST_SM07B-PASS-TBT(LF)(SN)
 0
 9
 9
+UAS
+JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical
+JST XH series connector, B4B-XH-A (http://www.jst-mfg.com/product/pdf/eng/eXH.pdf), generated with kicad-footprint-generator
+connector JST XH vertical
+0
+4
+4
+UAS
+JST_XH_S4B-XH-A_1x04_P2.50mm_Horizontal
+JST XH series connector, S4B-XH-A (http://www.jst-mfg.com/product/pdf/eng/eXH.pdf), generated with kicad-footprint-generator
+connector JST XH horizontal
+0
+4
+4
 UAS
 MODULE_DEV-15583
 
