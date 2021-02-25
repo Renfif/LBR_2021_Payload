@@ -209,7 +209,7 @@ Wire Wire Line
 Wire Wire Line
 	2100 4800 2100 5250
 $Comp
-L UAS-cache:UAS-rescue_JST-4-Pin-UAS-cache U?
+L UAS-rescue:UAS-rescue_JST-4-Pin-UAS-cache-UAS-cache U?
 U 1 1 6037EE1D
 P 3000 6150
 F 0 "U?" H 3000 6225 50  0000 C CNN
@@ -425,7 +425,7 @@ Wire Wire Line
 Wire Wire Line
 	2500 2800 2500 3250
 $Comp
-L UAS-cache:16_Pad_2x8_Set U?
+L UAS-rescue:16_Pad_2x8_Set-UAS-cache U?
 U 1 1 6040B9AA
 P 2550 3050
 F 0 "U?" H 2978 2821 50  0000 L CNN
