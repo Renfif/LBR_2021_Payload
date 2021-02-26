@@ -211,13 +211,13 @@ Wire Wire Line
 $Comp
 L UAS-rescue:UAS-rescue_JST-4-Pin-UAS-cache-UAS-cache U7
 U 1 1 6037EE1D
-P 3000 6150
-F 0 "U7" H 3000 6225 50  0000 C CNN
-F 1 "UAS-rescue_JST-4-Pin-UAS-cache" H 3000 6134 50  0000 C CNN
-F 2 "UAS:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 3000 6250 50  0001 C CNN
-F 3 "" H 3000 6250 50  0001 C CNN
-	1    3000 6150
-	1    0    0    -1  
+P 3000 6550
+F 0 "U7" H 3000 6625 50  0000 C CNN
+F 1 "UAS-rescue_JST-4-Pin-UAS-cache" H 3000 6534 50  0000 C CNN
+F 2 "UAS:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 3000 6650 50  0001 C CNN
+F 3 "" H 3000 6650 50  0001 C CNN
+	1    3000 6550
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	3200 6300 3200 6150
