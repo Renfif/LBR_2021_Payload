@@ -459,10 +459,10 @@ Wire Wire Line
 	2900 3650 2900 3250
 Connection ~ 2900 3250
 $Comp
-L UAS-rescue:Signal-Pad-UAS-cache U?
+L UAS-rescue:Signal-Pad-UAS-cache U12
 U 1 1 60391DEE
 P 4250 5500
-F 0 "U?" H 4328 5759 50  0000 L CNN
+F 0 "U12" H 4328 5759 50  0000 L CNN
 F 1 "Signal-Pad" H 4328 5668 50  0000 L CNN
 F 2 "UAS:Individual_Solder_Pad" H 4250 5500 50  0001 C CNN
 F 3 "" H 4250 5500 50  0001 C CNN
@@ -470,10 +470,10 @@ F 3 "" H 4250 5500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L UAS-rescue:Signal-Pad-UAS-cache U?
+L UAS-rescue:Signal-Pad-UAS-cache U13
 U 1 1 60392D35
 P 4450 5500
-F 0 "U?" H 4528 5759 50  0000 L CNN
+F 0 "U13" H 4528 5759 50  0000 L CNN
 F 1 "Signal-Pad" H 4528 5668 50  0000 L CNN
 F 2 "UAS:Individual_Solder_Pad" H 4450 5500 50  0001 C CNN
 F 3 "" H 4450 5500 50  0001 C CNN
