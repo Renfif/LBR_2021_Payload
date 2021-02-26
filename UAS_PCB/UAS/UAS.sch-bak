@@ -458,4 +458,38 @@ Connection ~ 2700 3650
 Wire Wire Line
 	2900 3650 2900 3250
 Connection ~ 2900 3250
+$Comp
+L UAS-rescue:Signal-Pad-UAS-cache U?
+U 1 1 60391DEE
+P 4250 5500
+F 0 "U?" H 4328 5759 50  0000 L CNN
+F 1 "Signal-Pad" H 4328 5668 50  0000 L CNN
+F 2 "" H 4250 5500 50  0001 C CNN
+F 3 "" H 4250 5500 50  0001 C CNN
+	1    4250 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L UAS-rescue:Signal-Pad-UAS-cache U?
+U 1 1 60392D35
+P 4450 5500
+F 0 "U?" H 4528 5759 50  0000 L CNN
+F 1 "Signal-Pad" H 4528 5668 50  0000 L CNN
+F 2 "" H 4450 5500 50  0001 C CNN
+F 3 "" H 4450 5500 50  0001 C CNN
+	1    4450 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 5600 4250 5900
+Wire Wire Line
+	4250 5900 5600 5900
+Wire Wire Line
+	5600 5900 5600 5550
+Wire Wire Line
+	4850 5550 4850 5700
+Wire Wire Line
+	4850 5700 4450 5700
+Wire Wire Line
+	4450 5700 4450 5600
 $EndSCHEMATC

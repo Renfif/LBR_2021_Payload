@@ -1,19 +1,6 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# UAS-cache_Signal-Pad
-#
-DEF UAS-cache_Signal-Pad U 0 40 Y Y 1 F N
-F0 "U" -300 -100 50 H V C CNN
-F1 "UAS-cache_Signal-Pad" -300 0 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-S -50 50 50 -100 0 1 0 f
-X Signal_Out 1 0 -100 100 U 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
 # UAS-rescue_12V-StepUp-Converter-UAS-cache
 #
 DEF UAS-rescue_12V-StepUp-Converter-UAS-cache U 0 40 Y Y 1 F N
@@ -137,6 +124,19 @@ S -100 150 -100 150 1 1 0 N
 S -100 150 100 -150 1 1 0 f
 X 1 1 -200 50 100 R 40 40 0 0 P
 X 2 2 -200 -50 100 R 40 40 0 0 P
+ENDDRAW
+ENDDEF
+#
+# UAS-rescue_Signal-Pad-UAS-cache
+#
+DEF UAS-rescue_Signal-Pad-UAS-cache U 0 40 Y Y 1 F N
+F0 "U" -300 -100 50 H V C CNN
+F1 "UAS-rescue_Signal-Pad-UAS-cache" -300 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -50 50 50 -100 0 1 0 f
+X Signal_Out 1 0 -100 100 U 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
