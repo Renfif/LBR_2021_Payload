@@ -1,6 +1,6 @@
 
 //figure out later
-          //SD Equivalent
+//SD Equivalent
 //CS -> CS (PIN2 - DAT3)
 //SCLK - > SCLK (PIN5 - CLK)
 //MOSI -> SDI (PIN3 - CMD)
@@ -53,12 +53,12 @@ void setup() {
     while (1);
   }
   Serial.println("card initialized.");
-}
+} 
 
 //altitude, what we're doing doing, time
 // test to see if it is smart enough to convert the integer to a string inside of the function call
 
-void dataLogging(int dataFile, String dataString, int altitude, String velocity, String Time) { 
+void dataLogging(File dataFile, String dataString, int altitude, String velocity, String Time) { 
   
   String dataString = dataString + "  Altitude:  " + altitude + "  Velocity  " + velocity + "  Time:  " Time; 
   

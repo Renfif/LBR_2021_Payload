@@ -3,6 +3,7 @@
 #include <Wire.h> 
 #include <Adafruit_Sensor.h>
 #include "Adafruit_BMP3XX.h"
+#include "SdFat.h"
 
 
 //Switch pins
@@ -33,7 +34,8 @@
 
 
 //Altimeter (I2C)
-#define SEALEVELPRESSURE_HPA (1013.25) //adjustment for pressure
+//http://www.usairnet.com/weather/maps/current/california/barometric-pressure/
+#define SEALEVELPRESSURE_HPA (1021.6735) //adjustment for pressure
 #define Alt_SDI 18
 #define Alt_SCK 19
 Adafruit_BMP3XX bmp; //I2C
