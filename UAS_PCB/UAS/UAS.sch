@@ -30,21 +30,10 @@ U 1 1 60363213
 P 2800 5650
 F 0 "U4" H 2800 5726 50  0000 C CNN
 F 1 "12V-StepUp-Converter" H 2800 5635 50  0000 C CNN
-F 2 "UAS:Pololu_12V_Step_Up_Voltage_Regulator" H 2800 5750 50  0001 C CNN
+F 2 "UAS:Pololu_12V_Step_Up_Voltage_Regulator_SMT" H 2800 5750 50  0001 C CNN
 F 3 "" H 2800 5750 50  0001 C CNN
 	1    2800 5650
 	0    -1   -1   0   
-$EndComp
-$Comp
-L UAS-rescue:JST-7-Pin-UAS-cache U8
-U 1 1 6036088A
-P 3950 4900
-F 0 "U8" H 3950 4975 50  0000 C CNN
-F 1 "JST-7-Pin" H 3950 4884 50  0000 C CNN
-F 2 "UAS:JST_SM07B-PASS-TBT(LF)(SN)" H 3950 5000 50  0001 C CNN
-F 3 "" H 3950 5000 50  0001 C CNN
-	1    3950 4900
-	-1   0    0    1   
 $EndComp
 $Comp
 L UAS-rescue:JST-3-Pin-UAS-cache U9
@@ -74,7 +63,7 @@ U 1 1 60364756
 P 2900 4150
 F 0 "U5" H 2900 4226 50  0000 C CNN
 F 1 "TB6612FNG-Dual-Motor-Driver" H 2900 4135 50  0000 C CNN
-F 2 "UAS:Pololu_TB6612_Dual_Motor_Driver_Carrier" H 2900 4250 50  0001 C CNN
+F 2 "UAS:Pololu_TB6612_Dual_Motor_Driver_Carrier_SMT" H 2900 4250 50  0001 C CNN
 F 3 "" H 2900 4250 50  0001 C CNN
 	1    2900 4150
 	1    0    0    -1  
@@ -180,7 +169,7 @@ Wire Wire Line
 	2300 4400 2550 4400
 Connection ~ 2050 4450
 Wire Wire Line
-	1900 4250 2550 4250
+	1900 4250 2350 4250
 Wire Wire Line
 	2550 4250 2550 4300
 Connection ~ 1900 4250
@@ -189,13 +178,7 @@ Wire Wire Line
 Wire Wire Line
 	1950 4500 1950 4800
 Wire Wire Line
-	1950 4800 1650 4800
-Wire Wire Line
-	1650 4800 1650 5250
-Wire Wire Line
-	1750 5250 1750 4900
-Wire Wire Line
-	1750 4900 2050 4900
+	1950 4800 1750 4800
 Wire Wire Line
 	2050 4900 2050 4600
 Wire Wire Line
@@ -250,60 +233,6 @@ Connection ~ 1100 4250
 Connection ~ 2750 6400
 Wire Wire Line
 	2750 6400 2800 6400
-Wire Wire Line
-	3750 4750 3500 4750
-Wire Wire Line
-	3500 4750 3500 5000
-Wire Wire Line
-	3500 5000 3250 5000
-Wire Wire Line
-	3750 4650 3450 4650
-Wire Wire Line
-	3450 4650 3450 4300
-Wire Wire Line
-	3450 4300 3250 4300
-Wire Wire Line
-	3750 4550 3350 4550
-Wire Wire Line
-	3350 4550 3350 4900
-Wire Wire Line
-	3350 4900 3250 4900
-Wire Wire Line
-	3750 4450 3350 4450
-Wire Wire Line
-	3350 4450 3350 4500
-Wire Wire Line
-	3350 4500 3250 4500
-Wire Wire Line
-	4150 4750 4350 4750
-Wire Wire Line
-	4350 4750 4350 4300
-Wire Wire Line
-	4350 4300 3550 4300
-Wire Wire Line
-	3550 4300 3550 4400
-Wire Wire Line
-	3550 4400 3250 4400
-Wire Wire Line
-	4150 4600 4450 4600
-Wire Wire Line
-	4450 4600 4450 4850
-Wire Wire Line
-	4450 4850 3400 4850
-Wire Wire Line
-	3400 4850 3400 4700
-Wire Wire Line
-	3400 4700 3250 4700
-Wire Wire Line
-	4150 4450 4250 4450
-Wire Wire Line
-	4250 4450 4250 5050
-Wire Wire Line
-	4250 5050 3450 5050
-Wire Wire Line
-	3450 5050 3450 4800
-Wire Wire Line
-	3450 4800 3250 4800
 Wire Wire Line
 	1900 4350 2350 4350
 Wire Wire Line
@@ -493,10 +422,10 @@ Wire Wire Line
 Wire Wire Line
 	4450 5700 4450 5600
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0101
 U 1 1 6038ECCA
 P 3200 6150
-F 0 "#PWR?" H 3200 5900 50  0001 C CNN
+F 0 "#PWR0101" H 3200 5900 50  0001 C CNN
 F 1 "GND" H 3205 5977 50  0000 C CNN
 F 2 "" H 3200 6150 50  0001 C CNN
 F 3 "" H 3200 6150 50  0001 C CNN
@@ -504,4 +433,73 @@ F 3 "" H 3200 6150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Connection ~ 3200 6150
+Wire Wire Line
+	3250 4300 4150 4300
+Wire Wire Line
+	4150 4300 4150 4450
+Wire Wire Line
+	3250 4400 3650 4400
+Wire Wire Line
+	3650 4400 3650 4200
+Wire Wire Line
+	3650 4200 4250 4200
+Wire Wire Line
+	4250 4200 4250 4600
+Wire Wire Line
+	4250 4600 4150 4600
+Wire Wire Line
+	3250 4500 3550 4500
+Wire Wire Line
+	3550 4500 3550 4100
+Wire Wire Line
+	3550 4100 4350 4100
+Wire Wire Line
+	4350 4100 4350 4750
+Wire Wire Line
+	4350 4750 4150 4750
+$Comp
+L UAS-rescue:JST-7-Pin-UAS-cache U8
+U 1 1 6036088A
+P 3950 4900
+F 0 "U8" H 3950 4975 50  0000 C CNN
+F 1 "JST-7-Pin" H 3950 4884 50  0000 C CNN
+F 2 "UAS:JST_SM07B-PASS-TBT(LF)(SN)" H 3950 5000 50  0001 C CNN
+F 3 "" H 3950 5000 50  0001 C CNN
+	1    3950 4900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3250 4700 3600 4700
+Wire Wire Line
+	3600 4700 3600 4450
+Wire Wire Line
+	3600 4450 3750 4450
+Wire Wire Line
+	3250 4800 3650 4800
+Wire Wire Line
+	3650 4800 3650 4550
+Wire Wire Line
+	3650 4550 3750 4550
+Wire Wire Line
+	3250 4900 3700 4900
+Wire Wire Line
+	3700 4900 3700 4650
+Wire Wire Line
+	3700 4650 3750 4650
+Wire Wire Line
+	3250 5000 3750 5000
+Wire Wire Line
+	3750 5000 3750 4750
+Wire Wire Line
+	1650 4900 1650 5250
+Wire Wire Line
+	1650 4900 2050 4900
+Wire Wire Line
+	1750 4800 1750 5250
+Wire Wire Line
+	2350 4350 2350 4250
+Connection ~ 2350 4350
+Connection ~ 2350 4250
+Wire Wire Line
+	2350 4250 2550 4250
 $EndSCHEMATC
