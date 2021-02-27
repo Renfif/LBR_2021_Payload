@@ -14,9 +14,9 @@
 #define Alt_SCK 19
 Adafruit_BMP3XX bmp; //I2C
 
-#define SD_CONFIG SdioConfig(DMA_SDIO)
-SdExFat sd;
-ExFile logfile;
+//#define SD_CONFIG SdioConfig(DMA_SDIO)
+SdFat sd;
+File logfile;
 
 #define LOG_INTERVAL 50 // millis between entries (reduce to take more/faster data)
 // how many Milliseconds before writing the logged data permanently to disk
@@ -57,9 +57,8 @@ void setup() {
   }
   // initialize the SD card
   Serial.print("Initializing SD card...");
-
   // see if the card is present and can be initialized:
-  if (!sd.begin(SD_CONFIG)) {
+  if (!sd.begin(SdioConfig(DMA_SDIO))) {
     Serial.println("Card failed, or not present");
   }
   else Serial.println("Card initialized.");
@@ -116,7 +115,7 @@ void loop() {
   delay((LOG_INTERVAL - 1) - (micros() % LOG_INTERVAL));
   
   int altitude = bmp.readAltitude(SEALEVELPRESSURE_HPA);
-  String data = "  Altitude:  " + altitude;
+  String data = "Altitude:  " + altitude;
   delay(3);
 
   int h = Hour.toInt();
@@ -149,7 +148,7 @@ void loop() {
   syncTime = micros();
   // blink LED to show we are syncing data to the card & updating FAT!
   logfile.flush();//physically save any bytes written to the file to the SD card
-}
+} 
 
 time_t getTeensy3Time()
 {
