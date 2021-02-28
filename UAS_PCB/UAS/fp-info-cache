@@ -1,4 +1,4 @@
-19066375241894110
+19067989826690360
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -82319,6 +82319,13 @@ MODULE_DEV-15583
 0
 33
 33
+UAS
+Payload_Logo
+
+
+0
+0
+0
 UAS
 Pololu_5V_5A_Step_Down_Regulator
 

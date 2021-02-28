@@ -205,6 +205,11 @@
       (net 29 GND))
     (pad 3 smd oval (at -2.54 -2.54 90) (size 1.8 3.5) (layers Back B.Paste B.Mask)
       (net 14 "Net-(U4-Pad3)"))
+    (model ${KIPRJMOD}/Models/step-up-voltage-regulator-u3v12fx.step
+      (offset (xyz -4.075 -3.8 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module "UAS:JST_SM07B-PASS-TBT(LF)(SN)" (layer Front) (tedit 603797E0) (tstamp 603B1B42)
