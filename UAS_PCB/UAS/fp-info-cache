@@ -1,4 +1,4 @@
-19069604556260338
+19071219624425566
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -82326,6 +82326,13 @@ MODULE_DEV-15583
 0
 33
 33
+UAS
+MOLEX_SHDRRA3W50P0X200_1X3_0353630360
+0353630360-1
+Connector
+0
+3
+3
 UAS
 Payload_Logo
 
