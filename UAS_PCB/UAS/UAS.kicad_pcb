@@ -102,7 +102,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory "Gerbers/Attempt3/"))
+      (outputdirectory "Gerbers/Attempt4/"))
   )
 
   (net 0 "")
@@ -35334,7 +35334,7 @@
   (segment (start 140.75 111.55) (end 140.75 114.95) (width 0.6) (layer Front) (net 34) (tstamp 603C8AB4))
   (via (at 140.75 111.55) (size 1.1) (drill 0.5) (layers Front Back) (net 34))
 
-  (zone (net 29) (net_name GND) (layer Back) (tstamp 0) (hatch edge 0.508)
+  (zone (net 29) (net_name GND) (layer Back) (tstamp 603D435A) (hatch edge 0.508)
     (connect_pads (clearance 0.254))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
