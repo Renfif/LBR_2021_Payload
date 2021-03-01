@@ -102,7 +102,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory "./gerbers"))
+      (outputdirectory "Gerbers/Attempt2/"))
   )
 
   (net 0 "")
@@ -751,7 +751,7 @@
       (net 23 "Net-(U7-Pad3)"))
     (pad 2 thru_hole oval (at 2.5 0 180) (size 1.7 1.95) (drill 0.95) (layers *.Cu *.Mask)
       (net 24 "Net-(U7-Pad2)"))
-    (pad 1 thru_hole roundrect (at 0 0 180) (size 1.7 1.95) (drill 0.95) (layers *.Cu *.Mask) (roundrect_rratio 0.147059)
+    (pad 1 thru_hole roundrect (at 0 0 180) (size 1.7 1.95) (drill 0.95) (layers *.Cu *.Mask) (roundrect_rratio 0.1470588235294118)
       (net 31 +12V))
     (model ${KISYS3DMOD}/Connector_JST.3dshapes/JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical.wrl
       (at (xyz 0 0 0))
@@ -35278,7 +35278,7 @@
   (segment (start 140.75 111.55) (end 140.75 114.95) (width 0.6) (layer Front) (net 34) (tstamp 603C8AB4))
   (via (at 140.75 111.55) (size 1.1) (drill 0.5) (layers Front Back) (net 34))
 
-  (zone (net 29) (net_name GND) (layer Back) (tstamp 0) (hatch edge 0.508)
+  (zone (net 29) (net_name GND) (layer Back) (tstamp 603C9B51) (hatch edge 0.508)
     (connect_pads (clearance 0.254))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
