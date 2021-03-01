@@ -550,4 +550,52 @@ Wire Wire Line
 Connection ~ 2800 3650
 Wire Wire Line
 	2800 3650 2800 3900
+$Comp
+L UAS-cache:UAS-rescue_Signal-Pad-UAS-cache U17
+U 1 1 603DAF7F
+P 5600 3750
+F 0 "U17" H 5512 3916 50  0000 R CNN
+F 1 "UAS-rescue_Signal-Pad-UAS-cache" H 5512 4007 50  0000 R CNN
+F 2 "UAS:Individual_Solder_Pad" H 5600 3750 50  0001 C CNN
+F 3 "" H 5600 3750 50  0001 C CNN
+	1    5600 3750
+	-1   0    0    1   
+$EndComp
+$Comp
+L UAS-cache:UAS-rescue_Signal-Pad-UAS-cache U15
+U 1 1 603D9E61
+P 5300 3750
+F 0 "U15" H 5212 3916 50  0000 R CNN
+F 1 "UAS-rescue_Signal-Pad-UAS-cache" H 5212 4007 50  0000 R CNN
+F 2 "UAS:Individual_Solder_Pad" H 5300 3750 50  0001 C CNN
+F 3 "" H 5300 3750 50  0001 C CNN
+	1    5300 3750
+	-1   0    0    1   
+$EndComp
+$Comp
+L UAS-cache:UAS-rescue_Signal-Pad-UAS-cache U16
+U 1 1 603D9324
+P 5600 3350
+F 0 "U16" H 5678 3609 50  0000 L CNN
+F 1 "UAS-rescue_Signal-Pad-UAS-cache" H 5678 3518 50  0000 L CNN
+F 2 "UAS:Individual_Solder_Pad" H 5600 3350 50  0001 C CNN
+F 3 "" H 5600 3350 50  0001 C CNN
+	1    5600 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L UAS-cache:UAS-rescue_Signal-Pad-UAS-cache U14
+U 1 1 603D8772
+P 5300 3350
+F 0 "U14" H 5378 3609 50  0000 L CNN
+F 1 "UAS-rescue_Signal-Pad-UAS-cache" H 5378 3518 50  0000 L CNN
+F 2 "UAS:Individual_Solder_Pad" H 5300 3350 50  0001 C CNN
+F 3 "" H 5300 3350 50  0001 C CNN
+	1    5300 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3450 5300 3650
+Wire Wire Line
+	5600 3450 5600 3650
 $EndSCHEMATC
