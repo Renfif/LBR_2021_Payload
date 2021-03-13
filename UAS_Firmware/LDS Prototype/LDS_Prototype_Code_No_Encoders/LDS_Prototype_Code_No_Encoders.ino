@@ -23,14 +23,15 @@
 #define KP .1
 #define KI 0
 #define KD 0
-
+//moving 1&2 or 3&4 affects the y axis
+//moving 1&3 or 2&4 affects the z axis
 //deadzone for receiver value
 const int deadzone = 20;
 
 //PID IO and Setpoint variables
-int Input = 0
-int Output = 0
-int Setpoint = 0
+int Input = 0;
+int Output = 0;
+int Setpoint = 0;
 
 // Set the delay between fresh samples
 uint16_t BNO055_SAMPLERATE_DELAY_MS = 100;
@@ -72,7 +73,6 @@ void setup() {
   
   //define I/O variables and settings!
   AutoPID LegPID = AutoPID(Input, Setpoint, Output, OUTPUT_MIN , OUTPUT_MAX, KP, KI, KD);
-  LegPID.
   
 }
 
@@ -80,7 +80,7 @@ void loop() {
   //gather and print IMU data with given calibration values and delay
   sensors_event_t orientationData;
   bno.getEvent(&orientationData, Adafruit_BNO055::VECTOR_EULER);
-  printEvent(&orientationData);
+  //printEvent(&orientationData);
   uint8_t system, gyro, accel, mag = 0;
   bno.getCalibration(&system, &gyro, &accel, &mag);
   delay(BNO055_SAMPLERATE_DELAY_MS);
@@ -93,39 +93,10 @@ void loop() {
   Ch2=pulseToPWM(Ch2);
   Ch3=pulseToPWM(Ch3);
   //print test
-  //Serial.println("Receiver Value: ");
-  //Serial.println(Ch1);
-  
-  //leg movement cycle test
-//  while(Ch1>254){
-//    digitalWrite(MotorPin1A, HIGH);
-//    delay(3000);
-//    digitalWrite(MotorPin1A, LOW);
-//    digitalWrite(MotorPin1B, HIGH);
-//    delay(3000);
-//    digitalWrite(MotorPin1B, LOW);
-//    digitalWrite(MotorPin2A, HIGH);
-//    delay(3000);
-//    digitalWrite(MotorPin2A, LOW);
-//    digitalWrite(MotorPin2B, HIGH);
-//    delay(3000);
-//    digitalWrite(MotorPin2B, LOW);
-//    digitalWrite(MotorPin3A, HIGH);
-//    delay(3000);
-//    digitalWrite(MotorPin3A, LOW);
-//    digitalWrite(MotorPin3B, HIGH);
-//    delay(3000);
-//    digitalWrite(MotorPin3B, LOW);
-//    digitalWrite(MotorPin4A, HIGH);
-//    delay(3000);
-//    digitalWrite(MotorPin4A, LOW);
-//    digitalWrite(MotorPin4B, HIGH);
-//    delay(3000);
-//    digitalWrite(MotorPin4B, LOW);
-//    delay(5000);
-//  }
-
-  
+  Serial.println("Receiver Value: ");
+  Serial.println(Ch3);
+  Serial.println(Ch2);
+  //manualLegMovement(Ch1, Ch2, Ch3);
 }
 
 int pulseToPWM(int pulse){
@@ -189,6 +160,47 @@ void printEvent(sensors_event_t* event) {
   Serial.print(y);
   Serial.print(" |\tz= ");
   Serial.println(z);
+}
+
+void setAllZero(){
+  analogWrite(MotorPin1A, 0);
+  analogWrite(MotorPin1B, 0);
+  analogWrite(MotorPin2A, 0);
+  analogWrite(MotorPin2B, 0);
+  analogWrite(MotorPin3A, 0);
+  analogWrite(MotorPin3B, 0);
+  analogWrite(MotorPin4A, 0);
+  analogWrite(MotorPin4B, 0);
+}
+
+void manualLegMovement(int en,int updown,int leftright){
+  bool enabled;
+  if(en < 0){enabled = true;}
+  else{enabled = false;}
+
+  if(enabled){
+    if(updown > 0){
+      analogWrite(MotorPin1A, updown);
+      analogWrite(MotorPin2A, updown);
+    }
+    else if (updown < 0){
+      analogWrite(MotorPin1B, updown);
+      analogWrite(MotorPin2B, updown);
+    }
+    else if(leftright > 0){
+      analogWrite(MotorPin3A, leftright);
+      analogWrite(MotorPin4A, leftright);
+    }
+    else if(leftright < 0){
+      analogWrite(MotorPin3B, leftright);
+      analogWrite(MotorPin4B, leftright);
+    }
+    else{
+      setAllZero();
+    }
+  }
+  else{setAllZero();}
+
 }
 
 void levelingWithPID(){
