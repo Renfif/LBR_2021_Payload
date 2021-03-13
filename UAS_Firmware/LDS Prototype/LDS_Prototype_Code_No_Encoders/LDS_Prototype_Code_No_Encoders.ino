@@ -23,8 +23,8 @@
 #define KP .1
 #define KI 0
 #define KD 0
-//moving 1&2 or 3&4 affects the y axis 1&2 + reverse 3&4 is negative
-//moving 1&3 or 2&4 affects the z axis 1&3 + reverse 2&4 is negative
+//moving 1&2 or 3&4 affects the y axis, 1&2 + reverse 3&4 is negative
+//moving 1&3 or 2&4 affects the z axis, 1&3 + reverse 2&4 is negative
 //deadzone for receiver value
 const int deadzone = 20;
 
