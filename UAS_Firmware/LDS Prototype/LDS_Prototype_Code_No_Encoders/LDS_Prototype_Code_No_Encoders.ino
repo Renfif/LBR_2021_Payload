@@ -204,7 +204,7 @@ void manualLegMovement(int en,int updown,int leftright){
     }
   }
   else{setAllZero();}
-
+  //if the switch is in zero state stop the motors
 }
 
 void levelingWithPID(int en, int targetY, int targetZ){
@@ -218,4 +218,5 @@ void levelingWithPID(int en, int targetY, int targetZ){
     // setup z loop to move z side A up and side B down simultaneously or the other way around until bno output z == 0
   }
   else{setAllZero();}
+  //if switch is in zero state stop the motors
 }
