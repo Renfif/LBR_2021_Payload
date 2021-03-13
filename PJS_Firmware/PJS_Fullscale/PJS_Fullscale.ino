@@ -3,7 +3,6 @@
 #include <Wire.h> 
 #include <Adafruit_Sensor.h>
 #include "Adafruit_BMP3XX.h"
-#include "SdFat.h"
 
 
 //Switch pins
@@ -11,7 +10,6 @@
 #define Switch2_Link 20      // (x1) when clicked the linkage is unfolded, when unclicked the linkage is not extended
 #define Switch3_DoorLock 22  // (x2) when the limit switch is clicked that means door is unlocked (though cannot do a check for locking)
 #define Switch4_UAS 23       // (x1) when unclicked PJS is deployed, when clicked PJS is inserted
-
 
 //Driver pins
 #define UAS_DriverIN1 0 
@@ -34,8 +32,7 @@
 
 
 //Altimeter (I2C)
-//http://www.usairnet.com/weather/maps/current/california/barometric-pressure/
-#define SEALEVELPRESSURE_HPA (1021.6735) //adjustment for pressure
+#define SEALEVELPRESSURE_HPA (1010.9) //adjustment for pressure
 #define Alt_SDI 18
 #define Alt_SCK 19
 Adafruit_BMP3XX bmp; //I2C
@@ -72,20 +69,23 @@ void setup() {
   pinMode(LockB_DriverIN2, OUTPUT);
 }
 
-File dataFile = SD.open("datalog.txt", FILE_WRITE)
-
 void loop() {
-
+  int State_Switch1_Link = digitalRead(Switch1_Link); 
+  int State_Switch2_Link = digitalRead(Switch2_Link0); 
+  int State_Switch3_DoorLock = digitalRead(Switch3_DoorLock); 
+  int State_Switch4_UAS = digitalRead(Switch4_UAS);
+  
   //getting altitude and velocity
+  
   float altitude = bmp.readAltitude(SEALEVELPRESSURE_HPA);
-  delay(10); 
-  float altitudeNew = bmp.readAltitude(SEALEVELPRESSURE_HPA);
 
-  dy = altitudeNew - altitude
-  dt = 0.01 
-
-  velocity = dy/dt //what units does this come out as?
-
+  //if you cannot call the bmp.readaltitude function in the header, file, make these adjustments
+  //delay(0.000050);
+  //float altitudeNew = bmp.readAltitude(SEALEVELPRESSURE_HPA);
+  //float velocity = velocity(altitude, altitudeNew);
+  
+  float velocity = velocity(altitude, altitude);
+  
   //get stuff from receiver. Only getting CH2 - CH6 input during installation and setup
   Ch1 = receive(receiver1) //safety switch
   Ch2 = receive(receiver2) //Automatic Arming Switch - if on, will deploy if altimeter and other conditions are met
@@ -96,77 +96,42 @@ void loop() {
 
   //if arming switch is on, execute the following
   
-  
-  
   if(Ch1 > 200) { 
 
-    loopCheck = 1;
-    
     if(Ch2 > 200)&&(altitude > 550)&&(altitude < 650)&&(velocity < 30){ 
-      deployment(Time, switch1_Link, switch2_Link, switch3_DoorLock, switch4_UAS)
+      deployment(Time, State_Switch1_Link, State_Switch2_Link, State_Switch3_DoorLock, State_Switch4_UAS)
     }
     
     if(Ch3 > 200) { 
-      deployment(Time, switch1_Link, switch2_Link, switch3_DoorLock, switch4_UAS)
+      deployment(Time, State_Switch1_Link, State_Switch2_Link, State_Switch3_DoorLock, State_Switch4_UAS)
     } 
 
     if(Ch4 > 200) { 
-      String dataString = "Unlocking door...  ";
-      dataLogging(dataFile, dataString, altitude, velocity, Time);
       unlockDoor()
-      String dataString = "Door unlocked.     ";
-      dataLogging(dataFile, dataString, altitude, velocity, Time);
-      
     }
 
     else if (Ch4 < 200) {
-      String dataString = "Locking door...    "; 
-      dataLogging(dataFile, dataString, altitude, velocity, Time);
       lockDoor()
-      String dataString = "Door locked.       "; 
-      dataLogging(dataFile, dataString, altitude, velocity, Time);
-
     }
 
     if(Ch5 > 200) { 
-      String dataString = "Opening Door...    "; 
-      dataLogging(dataFile, dataString, altitude, velocity, Time);
       openDoor()
-      String dataString = "Door opened.       "; 
-      dataLogging(dataFile, dataString, altitude, velocity, Time);
-
     }
 
     else if (Ch5 < 200) { 
-      String dataString = "Closing door...    ";
-      dataLogging(dataFile, dataString, altitude, velocity, Time);
       closeDoor()
-      String dataString = "Door closed.       ";
-      dataLogging(dataFile, dataString, altitude, velocity, Time);
     }
 
     if(Ch6 > 200) { 
-      String dataString = "Deploying UAS...   ";
-      dataLogging(dataFile, dataString, altitude, velocity, Time);
       deployUAS() 
-      String dataString = "UAS deployed.      ";
-      dataLogging(dataFile, dataString, altitude, velocity, Time);
     }
 
     else if(Ch6 < 200) { 
-      String dataString = "Installing UAS...  ";
-      dataLogging(dataFile, dataString, altitude, velocity, Time);
       installUAS()
-      String dataString = "UAS installed.     ";
-      dataLogging(dataFile, dataString, altitude, velocity, Time);
     }
     
   }
-
-  else if(loopCheck == 1) { 
-    dataFile.close();
-  }
- 
+  
 }
 
 
