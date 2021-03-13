@@ -1,11 +1,17 @@
-
-
+float velocity(altitude) {
+  delay(0.000050); //uncomment if we make the adjustment in the main program
+  float altitudeNew = bmp.readAltitude(SEALEVELPRESSURE_HPA)
+  dy = altitudeNew - altitude
+  dt = 0.000050
+  velocity = dy/dt 
+  return velocity;
+}
+  
 int receive(receiverX) { 
   int Ch=pulseIn(receiverX,HIGH,25000);
   Ch=pulseToPWM(Ch);
   return Ch;
 }
-
 
 int pulseToPWM(int pulse){
   if (pulse>1000){
@@ -21,34 +27,34 @@ int pulseToPWM(int pulse){
   return pulse;
 }
 
-
-void deployment(Time, switch1_Link, switch2_Link, switch3_DoorLock, switch4_UAS) { 
+//delete this later deployment(Time, State_Switch1_Link, State_Switch2_Link, State_Switch3_DoorLock, State_Switch4_UAS)
+void deployment(Time, State_Switch1_Link, State_Switch2_Link, State_Switch3_DoorLock, State_Switch4_UAS) { 
 
   //if Switch3s are not clicked (door is not unlocked), unlock door
-  if(Switch3_DoorLock == LOW) { 
+  if(State_Switch3_DoorLock == LOW) { 
     unlockDoor(); 
   }
 
   //if Switch3s are clicked (door unlocked), open door
-  if(Switch3_DoorLock == HIGH) { 
+  if(State_Switch3_DoorLock == HIGH) { 
     openDoor();
   }
 
 
   //if Switch1_Link is unclicked and Switch2_Link is clicked (door open), deploy UAS
-  if(Switch1_Link == LOW && Switch2_Link == HIGH){ 
+  if(State_Switch1_Link == LOW && State_Switch2_Link == HIGH){ 
     deployUAS();
   }
 
 
   //if Switch4_UAS is low (UAS deployed), close door
-  if(switch4_UAS == LOW) {
+  if(State_Switch4_UAS == LOW) {
     closeDoor();
   }
 
 
   //if Switch1_Link is clicked and Switch2_LInk is unclicked (door closed), lock door
-  if(Switch1_Link == HIGH && Switch2_Link == LOW) { 
+  if(State_Switch1_Link == HIGH && State_Switch2_Link == LOW) { 
     lockDoor(lockTime)
     }
  
@@ -57,7 +63,8 @@ void deployment(Time, switch1_Link, switch2_Link, switch3_DoorLock, switch4_UAS)
 void unlockDoor() {
   
   for(int i = 0; i < 255; i++){ 
-    if(digitalRead(Switch3_DoorLock) == LOW || Ch4 > 200) {  
+    State_Switch3_DoorLock = digitalRead(Switch3_DoorLock)
+    if(State_Switch3_DoorLock == LOW || Ch4 > 200) {  
       analogWrite(LockA_DriverIN1, i); 
       analogWrite(LockA_DriverIN2, 0);
       analogWrite(LockB_DriverIN1, 0); 
@@ -66,11 +73,12 @@ void unlockDoor() {
     }
   }
   
-  while(digitalRead(Switch3_DoorLock) == LOW || Ch4 > 200) { 
+  while(State_Switch3_DoorLock == LOW || Ch4 > 200) { 
     analogWrite(LockA_DriverIN1, 255); 
     analogWrite(LockA_DriverIN2, 0);
     analogWrite(LockB_DriverIN1, 0); 
     analogWrite(LockB_DriverIN2, 255);
+    State_Switch3_DoorLock = digitalRead(Switch3_DoorLock)
   }
   
   analogWrite(LockA_DriverIN1, 0);
