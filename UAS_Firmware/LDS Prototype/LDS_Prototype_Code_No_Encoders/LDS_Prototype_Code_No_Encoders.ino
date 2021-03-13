@@ -23,14 +23,16 @@
 #define KP .1
 #define KI 0
 #define KD 0
-//moving 1&2 or 3&4 affects the y axis
-//moving 1&3 or 2&4 affects the z axis
+//moving 1&2 or 3&4 affects the y axis 1&2 + reverse 3&4 is negative
+//moving 1&3 or 2&4 affects the z axis 1&3 + reverse 2&4 is negative
 //deadzone for receiver value
 const int deadzone = 20;
 
 //PID IO and Setpoint variables
-int Input = 0;
-int Output = 0;
+int PIDYInput = 0;
+int PIDZInput = 0;
+int OutputY = 0;
+int OutputZ = 0;
 int Setpoint = 0;
 
 // Set the delay between fresh samples
@@ -72,7 +74,8 @@ void setup() {
   bno.setExtCrystalUse(true);
   
   //define I/O variables and settings!
-  AutoPID LegPID = AutoPID(Input, Setpoint, Output, OUTPUT_MIN , OUTPUT_MAX, KP, KI, KD);
+  AutoPID LegPIDY = AutoPID(PIDYInput, Setpoint, OutputY, OUTPUT_MIN , OUTPUT_MAX, KP, KI, KD);
+  AutoPID LegPIDZ = AutoPID(PIDZInput, Setpoint, OutputZ, OUTPUT_MIN , OUTPUT_MAX, KP, KI, KD);
   
 }
 
@@ -80,7 +83,7 @@ void loop() {
   //gather and print IMU data with given calibration values and delay
   sensors_event_t orientationData;
   bno.getEvent(&orientationData, Adafruit_BNO055::VECTOR_EULER);
-  //printEvent(&orientationData);
+  printEvent(&orientationData);
   uint8_t system, gyro, accel, mag = 0;
   bno.getCalibration(&system, &gyro, &accel, &mag);
   delay(BNO055_SAMPLERATE_DELAY_MS);
@@ -96,7 +99,7 @@ void loop() {
   Serial.println("Receiver Value: ");
   Serial.println(Ch3);
   Serial.println(Ch2);
-  //manualLegMovement(Ch1, Ch2, Ch3);
+  manualLegMovement(Ch1, Ch2, Ch3);
 }
 
 int pulseToPWM(int pulse){
@@ -176,6 +179,7 @@ void setAllZero(){
 void manualLegMovement(int en,int updown,int leftright){
   bool enabled;
   if(en < 0){enabled = true;}
+  //enabled if switched is pushed to forward state
   else{enabled = false;}
 
   if(enabled){
@@ -203,6 +207,15 @@ void manualLegMovement(int en,int updown,int leftright){
 
 }
 
-void levelingWithPID(){
-    
+void levelingWithPID(int en, int targetY, int targetZ){
+  bool enabled;
+  if(en > 0){enabled = true;}
+  //enabled if the switch is pushed to the backward state
+  else{enabled = false;}
+
+  if(enabled){
+    // setup y loop to move y side A up and side B down simultaneously or the other way around until bno output y == 0
+    // setup z loop to move z side A up and side B down simultaneously or the other way around until bno output z == 0
+  }
+  else{setAllZero();}
 }
