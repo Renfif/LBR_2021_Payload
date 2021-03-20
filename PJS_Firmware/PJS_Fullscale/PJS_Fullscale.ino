@@ -1,7 +1,6 @@
-
-#include <PJS_FullscaleFunctions.h>
+#include "PJS_FullscaleFunctions.h"
 #include <Wire.h> 
-#include <Adafruit_Sensor.h>
+#include "Adafruit_Sensor.h"
 #include "Adafruit_BMP3XX.h"
 
 
@@ -47,7 +46,6 @@ Adafruit_BMP3XX bmp; //I2C
 #define SD_CLK 36
 
 
-
 void setup() { 
 
   Serial.begin(115200); 
@@ -56,8 +54,13 @@ void setup() {
   bmp.setPressureOversampling(BMP3_OVERSAMPLING_4X);
   bmp.setIIRFilterCoeff(BMP3_IIR_FILTER_COEFF_3);
   bmp.setOutputDataRate(BMP3_ODR_50_HZ);
-
+  
+  int unlockTime = 5
+  int lockTime = 4
+  int altitudeMin = 550
+  int altitudeMax = 650
   int loopCheck = 0; 
+  
 
   pinMode(UAS_DriverIN1, OUTPUT);
   pinMode(UAS_DriverIN2, OUTPUT);
@@ -72,7 +75,6 @@ void setup() {
 void loop() {
   int State_Switch1_Link = digitalRead(Switch1_Link); 
   int State_Switch2_Link = digitalRead(Switch2_Link0); 
-  int State_Switch3_DoorLock = digitalRead(Switch3_DoorLock); 
   int State_Switch4_UAS = digitalRead(Switch4_UAS);
   
   //getting altitude and velocity
@@ -84,7 +86,7 @@ void loop() {
   //float altitudeNew = bmp.readAltitude(SEALEVELPRESSURE_HPA);
   //float velocity = velocity(altitude, altitudeNew);
   
-  float velocity = velocity(altitude, altitude);
+  float velocity = velocity(altitude);
   
   //get stuff from receiver. Only getting CH2 - CH6 input during installation and setup
   Ch1 = receive(receiver1) //safety switch
@@ -97,21 +99,21 @@ void loop() {
   //if arming switch is on, execute the following
   
   if(Ch1 > 200) { 
-
-    if(Ch2 > 200)&&(altitude > 550)&&(altitude < 650)&&(velocity < 30){ 
-      deployment(Time, State_Switch1_Link, State_Switch2_Link, State_Switch3_DoorLock, State_Switch4_UAS)
+ 
+    if(Ch2 > 200)&&(altitude > altitudeMin)&&(altitude < altitudeMax)&&(velocity < 30){ 
+      deployment(Time, State_Switch1_Link, State_Switch2_Link, State_Switch4_UAS)
     }
     
-    if(Ch3 > 200) { 
-      deployment(Time, State_Switch1_Link, State_Switch2_Link, State_Switch3_DoorLock, State_Switch4_UAS)
+    else if(Ch3 > 200) { 
+      deployment(Time, State_Switch1_Link, State_Switch2_Link, State_Switch4_UAS)
     } 
 
     if(Ch4 > 200) { 
-      unlockDoor()
+      unlockDoor(unlockTime)
     }
 
     else if (Ch4 < 200) {
-      lockDoor()
+      lockDoor(lockTime)
     }
 
     if(Ch5 > 200) { 

@@ -43,7 +43,6 @@ void setup() {
     ; // wait for serial port to connect. Needed for native USB port only
   }
 
-
   Serial.print("Initializing SD card...");
 
   // see if the card is present and can be initialized:
