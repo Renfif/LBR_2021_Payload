@@ -117,33 +117,44 @@ void loop() {
       deployment(Time, State_Switch1_Link, State_Switch2_Link, State_Switch4_UAS);
     } 
 
+    //start of individualized manual 
     if(Ch4 > 200) { 
-      unlockDoor(unlockTime);
+      analogWrite(LockA_DriverIN1, 255); 
+      analogWrite(LockA_DriverIN2, 0);
+      analogWrite(LockB_DriverIN1, 0); 
+      analogWrite(LockB_DriverIN2, 255);
       Serial.println("Unlock door"); 
     }
 
     else if (Ch4 < 200) {
-      lockDoor(lockTime);
+      analogWrite(LockA_DriverIN1, 0); 
+      analogWrite(LockA_DriverIN2, 255);
+      analogWrite(LockB_DriverIN1, 255); 
+      analogWrite(LockB_DriverIN2, 0);
       Serial.println("Lock door"); 
     }
 
     if(Ch5 > 200) { 
-      openDoor();
+      analogWrite(Link_DriverIN1, 255); 
+      analogWrite(Link_DriverIN2, 0);
       Serial.println("Open door"); 
     }
 
     else if (Ch5 < 200) { 
-      closeDoor();
+      analogWrite(Link_DriverIN1, 0); 
+      analogWrite(Link_DriverIN2, 255);
       Serial.println("Close door"); 
     }
 
     if(Ch6 > 200) { 
-      deployUAS(); 
+      analogWrite(UAS_DriverIN2, 0); 
+      analogWrite(UAS_DriverIN1, 255); 
       Serial.println("Deploy UAS"); 
     }
 
     else if(Ch6 < 200) { 
-      installUAS();
+      analogWrite(UAS_DriverIN2, 255); 
+      analogWrite(UAS_DriverIN1, 0); 
       Serial.println("Install UAS"); 
     }
     
@@ -294,18 +305,18 @@ void closeDoor() {
 void deployUAS() { 
   for(int i = 0; i < 255; i++) { 
     if(digitalRead(Switch1_Link) == LOW && digitalRead(Switch2_Link) == HIGH || Ch5 > 200) { 
-      analogWrite(Link_DriverIN1, 0); 
-      analogWrite(Link_DriverIN2, i);
+    analogWrite(UAS_DriverIN2, i); 
+    analogWrite(UAS_DriverIN1, 0); 
       delay(10); 
     }
   }
 
   while(digitalRead(Switch1_Link) == LOW && digitalRead(Switch2_Link) == HIGH || Ch5 > 200) { 
-    analogWrite(Link_DriverIN1, 0); 
-    analogWrite(Link_DriverIN2, 255);
+    analogWrite(UAS_DriverIN2, 0); 
+    analogWrite(UAS_DriverIN1, 255); 
   }
-  analogWrite(Link_DriverIN1, 0); 
-  analogWrite(Link_DriverIN2, 0);
+    analogWrite(UAS_DriverIN2, 0); 
+    analogWrite(UAS_DriverIN1, 0); 
 }
 
 
