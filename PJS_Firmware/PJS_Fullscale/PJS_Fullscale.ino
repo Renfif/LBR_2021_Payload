@@ -126,7 +126,7 @@ void loop() {
       Serial.println("Unlock door"); 
     }
 
-    else if (Ch4 < 200) {
+    else if (Ch4 < -200) {
       analogWrite(LockA_DriverIN1, 0); 
       analogWrite(LockA_DriverIN2, 255);
       analogWrite(LockB_DriverIN1, 255); 
@@ -134,7 +134,7 @@ void loop() {
       Serial.println("Lock door"); 
     }
 
-    else if (Ch4 == 0){
+    else if (Ch4 > -100 && Ch4 < 200){
       analogWrite(LockA_DriverIN1, 0); 
       analogWrite(LockA_DriverIN2, 0);
       analogWrite(LockB_DriverIN1, 0); 
@@ -148,13 +148,13 @@ void loop() {
       Serial.println("Open door"); 
     }
 
-    else if (Ch5 < 200) { 
+    else if (Ch5 < -200) { 
       analogWrite(Link_DriverIN1, 0); 
       analogWrite(Link_DriverIN2, 255);
       Serial.println("Close door"); 
     }
 
-    else if (Ch5 == 0){
+    else if (Ch5 > -100 && Ch5 < 200){
       analogWrite(Link_DriverIN1, 0); 
       analogWrite(Link_DriverIN2, 0);
       Serial.println("Door stopped"); 
@@ -166,13 +166,13 @@ void loop() {
       Serial.println("Deploy UAS"); 
     }
 
-    else if(Ch6 < 200) { 
+    else if(Ch6 < -200) { 
       analogWrite(UAS_DriverIN2, 255); 
       analogWrite(UAS_DriverIN1, 0); 
       Serial.println("Install UAS"); 
     }
 
-    else if(Ch6 == 0) { 
+    else if(Ch6 > -100 && Ch6 < 200) { 
       analogWrite(UAS_DriverIN2, 0); 
       analogWrite(UAS_DriverIN1, 0); 
       Serial.println("UAS Installation stopped"); 
