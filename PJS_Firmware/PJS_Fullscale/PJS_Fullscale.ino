@@ -134,6 +134,14 @@ void loop() {
       Serial.println("Lock door"); 
     }
 
+    else if (Ch4 == 0){
+      analogWrite(LockA_DriverIN1, 0); 
+      analogWrite(LockA_DriverIN2, 0);
+      analogWrite(LockB_DriverIN1, 0); 
+      analogWrite(LockB_DriverIN2, 0);
+      Serial.println("Door Locks stopped");
+    }
+
     if(Ch5 > 200) { 
       analogWrite(Link_DriverIN1, 255); 
       analogWrite(Link_DriverIN2, 0);
@@ -144,6 +152,12 @@ void loop() {
       analogWrite(Link_DriverIN1, 0); 
       analogWrite(Link_DriverIN2, 255);
       Serial.println("Close door"); 
+    }
+
+    else if (Ch5 == 0){
+      analogWrite(Link_DriverIN1, 0); 
+      analogWrite(Link_DriverIN2, 0);
+      Serial.println("Door stopped"); 
     }
 
     if(Ch6 > 200) { 
@@ -157,17 +171,26 @@ void loop() {
       analogWrite(UAS_DriverIN1, 0); 
       Serial.println("Install UAS"); 
     }
+
+    else if(Ch6 == 0) { 
+      analogWrite(UAS_DriverIN2, 0); 
+      analogWrite(UAS_DriverIN1, 0); 
+      Serial.println("UAS Installation stopped"); 
+    }
     
+  }
+  else{
+    setAllZero();
   }
   
 }
 
-float velocity(altitude) {
-  dt = 0.000050
+float velocity(float altitude) {
+  float dt = 0.000050;
   delay(dt); //uncomment if we make the adjustment in the main program
-  float altitudeNew = bmp.readAltitude(SEALEVELPRESSURE_HPA)
-  dy = altitudeNew - altitude
-  velocity = dy/dt 
+  float altitudeNew = bmp.readAltitude(SEALEVELPRESSURE_HPA);
+  float dy = altitudeNew - altitude;
+  float velocity = dy/dt;
   return velocity;
 }
   
@@ -326,6 +349,17 @@ void installUAS() {
     analogWrite(UAS_DriverIN1, 0); 
     delay(10); 
   }
+}
+
+void setAllZero(){
+  analogWrite(UAS_DriverIN1, 0);
+  analogWrite(UAS_DriverIN2, 0);
+  analogWrite(Link_DriverIN1, 0);
+  analogWrite(Link_DriverIN2, 0);
+  analogWrite(LockA_DriverIN1, 0);
+  analogWrite(LockA_DriverIN2, 0);
+  analogWrite(LockB_DriverIN1, 0);
+  analogWrite(LockB_DriverIN2, 0);
 }
 
 
