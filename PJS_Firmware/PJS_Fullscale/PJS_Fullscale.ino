@@ -104,17 +104,18 @@ void loop() {
   int Ch4 = receive(RF_CH4); //lock and unlock
   int Ch5 = receive(RF_CH5); //door open and door close
   int Ch6 = receive(RF_CH6); //uas deploy uas insert
-
   //if arming switch is on, execute the following
   
   if(Ch1 > 200) { 
  
     if((Ch2 > 200)&&(altitude > altitudeMin)&&(altitude < altitudeMax)&&(velocityValue < 30)){ 
       deployment(Time, State_Switch1_Link, State_Switch2_Link, State_Switch4_UAS);
+      Serial.println("Automated Altitude Based Deployment Engaged");
     }
     
     else if(Ch3 > 200) { 
       deployment(Time, State_Switch1_Link, State_Switch2_Link, State_Switch4_UAS);
+      Serial.println("Automated Deployment Override Initiated");
     } 
 
     //start of individualized manual 
@@ -201,8 +202,8 @@ int receive(int receiverX) {
 }
 
 int pulseToPWM(int pulse){
-  if (pulse>1000){
-    pulse = map(pulse, 1000, 2000, -500, 500);
+  if (pulse>950){
+    pulse = map(pulse, 950, 2050, -500, 500);
     pulse = constrain(pulse, -255, 255);  
   }
   else{
