@@ -168,7 +168,7 @@ void loop() {
     }
 
     else if(Ch6 < -200) { 
-      analogWrite(UAS_DriverIN2, 255); 
+      analogWrite(UAS_DriverIN2, 135); 
       analogWrite(UAS_DriverIN1, 0); 
       Serial.println("Install UAS"); 
     }
@@ -345,7 +345,7 @@ void deployUAS() {
 
 
 void installUAS() { 
-  for(int i = 255; i < 255; i++) { 
+  for(int i = 135; i < 135; i++) { 
     analogWrite(UAS_DriverIN2, i); 
     analogWrite(UAS_DriverIN1, 0); 
     delay(10); 
