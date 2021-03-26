@@ -45,8 +45,8 @@ Adafruit_BMP3XX bmp; //I2C
 #define SD_CMD 37 
 #define SD_CLK 36
 
-int unlockTime = 1.5;
-int lockTime = 1.5;
+int unlockTime = 2;
+int lockTime = 2;
 int altitudeMin = 550;
 int altitudeMax = 650;
 int loopCheck = 0; 
@@ -60,7 +60,7 @@ int Ch4 = 0;
 int Ch5 = 0; 
 int Ch6 = 0; 
 
-int receive(int receiverX);
+//int receive(int receiverX);
 
 void setup() { 
 
@@ -106,8 +106,9 @@ void loop() {
   //float altitudeNew = bmp.readAltitude(SEALEVELPRESSURE_HPA);
   //float velocity = velocity(altitude, altitudeNew);
   
-  float velocityValue = velocity(altitude);
-  
+//  float velocityValue = velocity(altitude);
+//  Serial.print("Velocity: ");
+//  Serial.println(velocityValue);
   //get stuff from receiver. Only getting CH2 - CH6 input during installation and setup
   int Ch1 = receive(RF_CH1); //safety switch
   int Ch2 = receive(RF_CH2); //Automatic Arming Switch - if on, will deploy if altimeter and other conditions are met
@@ -119,7 +120,8 @@ void loop() {
   
   if(Ch1 > 200) { 
  
-    if((Ch2 > 200)&&(altitude > altitudeMin)&&(altitude < altitudeMax)&&(velocityValue < 30)){ 
+//    if((Ch2 > 200)&&(altitude > altitudeMin)&&(altitude < altitudeMax)&&(velocityValue < 30)){ 
+    if((Ch2 > 200)&&(altitude > altitudeMin)&&(altitude < altitudeMax)){ 
       deployment(Time, State_Switch1_Link, State_Switch2_Link, State_Switch4_UAS);
       Serial.println("Automated Altitude Based Deployment Engaged");
     }
@@ -154,18 +156,26 @@ void loop() {
       Serial.println("Door Locks stopped");
     }
 
+//    if(Ch5 > 200) { 
+//      analogWrite(Link_DriverIN1, 255); 
+//      analogWrite(Link_DriverIN2, 0);
+//      Serial.println("Close door"); 
+//    }
+//
+//    else if (Ch5 < -200) { 
+//      analogWrite(Link_DriverIN1, 0); 
+//      analogWrite(Link_DriverIN2, 255);
+//      Serial.println("Open door"); 
+//    }
     if(Ch5 > 200) { 
-      analogWrite(Link_DriverIN1, 255); 
-      analogWrite(Link_DriverIN2, 0);
-      Serial.println("Open door"); 
-    }
-
-    else if (Ch5 < -200) { 
-      analogWrite(Link_DriverIN1, 0); 
-      analogWrite(Link_DriverIN2, 255);
+      closeDoor();
       Serial.println("Close door"); 
     }
 
+    else if (Ch5 < -200) { 
+      openDoor();
+      Serial.println("Open door"); 
+    }
     else if (Ch5 > -100 && Ch5 < 200){
       analogWrite(Link_DriverIN1, 0); 
       analogWrite(Link_DriverIN2, 0);
@@ -197,14 +207,14 @@ void loop() {
   
 }
 
-float velocity(float altitude) {
-  float dt = 0.000050;
-  delay(dt); //uncomment if we make the adjustment in the main program
-  float altitudeNew = bmp.readAltitude(SEALEVELPRESSURE_HPA);
-  float dy = altitudeNew - altitude;
-  float velocity = dy/dt;
-  return velocity;
-}
+//float velocity(float altitude) {
+//  float dt = 0.000050;
+//  delay(dt); //uncomment if we make the adjustment in the main program
+//  float altitudeNew = bmp.readAltitude(SEALEVELPRESSURE_HPA);
+//  float dy = altitudeNew - altitude;
+//  float velocity = dy/dt;
+//  return velocity;
+//}
   
 int receive(int receiverX) { 
   int Ch=pulseIn(receiverX,HIGH,25000);
@@ -225,31 +235,32 @@ int pulseToPWM(int pulse){
   }
   return pulse;
 }
-
-int deployment(int Time, int State_Switch1_Link, int State_Switch2_Link, int State_Switch4_UAS) { 
-
+//********************************************************************************************************
+void deployment(int Time, int State_Switch1_Link, int State_Switch2_Link, int State_Switch4_UAS) { 
+  Serial.println("Deployment Loop Entered");
+  Serial.println("Door Unlocking");
   unlockDoor(unlockTime); 
-  delay(1000);
-  
+  delay(100);
+  Serial.println("Door Opening");
   openDoor();
-  delay(1000);
-  
+  delay(100);
+  Serial.println("Deploying UAS");
   //if Switch1_Link is unclicked and Switch2_Link is clicked (door open), &uas limit switch is clicked deploy UAS
   deployUAS();
-
+  delay(100);
+  Serial.println("Closing Door");
   //if Switch4_UAS is low (UAS deployed), close door
   if(State_Switch4_UAS == 1) {
     closeDoor();
   }
-
-
+  Serial.println("Re-Locking Door");
   //if Switch1_Link is clicked and Switch2_LInk is unclicked (door closed), lock door
   if(State_Switch1_Link == 0 && State_Switch2_Link == 1) { 
     lockDoor(lockTime);
   }
 }
-
-int unlockDoor(int unlockTime) {
+//********************************************************************************************************
+void unlockDoor(int unlockTime) {
   
   for(int i = 0; i < 255; i++){  
     analogWrite(LockA_DriverIN1, i); 
@@ -271,9 +282,8 @@ int unlockDoor(int unlockTime) {
   analogWrite(LockB_DriverIN1, 0); 
   analogWrite(LockB_DriverIN2, 0);
 }
-  
-
-int lockDoor(int lockTime) { 
+//-------------------------------------------------------------------------------  
+void lockDoor(int lockTime) { 
   for(int i = 0; i < 255; i++) {  
       analogWrite(LockA_DriverIN1, 0); 
       analogWrite(LockA_DriverIN2, i);
@@ -288,13 +298,13 @@ int lockDoor(int lockTime) {
       analogWrite(LockB_DriverIN1, 255); 
       analogWrite(LockB_DriverIN2, 0);
       delay(1000); 
-    }
+  }
   analogWrite(LockA_DriverIN1, 0);
   analogWrite(LockA_DriverIN2, 0);
   analogWrite(LockB_DriverIN1, 0); 
   analogWrite(LockB_DriverIN2, 0);
 }
-
+//--------------------------------------------------------------------------------
 
 void openDoor() { //switches will have different states at some points so || (or) is used?????
 //  for(int i = 0; i < 256; i++) { 
@@ -305,38 +315,38 @@ void openDoor() { //switches will have different states at some points so || (or
 //    }
 //  }
   
-  while(digitalRead(Switch1_Link) == 0 || digitalRead(Switch2_Link) == 1 || Ch5 > 200) { 
+  if(digitalRead(Switch1_Link) == 0 || digitalRead(Switch2_Link) == 1 || Ch5 > 200) { 
     analogWrite(Link_DriverIN1, 0); 
     analogWrite(Link_DriverIN2, 255);
+    delay(10);
   }
   analogWrite(Link_DriverIN1, 0); 
   analogWrite(Link_DriverIN2, 0);
 }
-
-
+//-----------------------------------------------------------------------------------
 
 void closeDoor() { 
-  for(int i = 0; i < 256; i++) { 
-    if(digitalRead(Switch4_UAS) == 1 || Ch5 < 200) {
-      analogWrite(Link_DriverIN1, i); 
-      analogWrite(Link_DriverIN2, 0);
-      delay(10); 
-    }
-  }
+//  for(int i = 0; i < 256; i++) { 
+//    if(digitalRead(Switch4_UAS) == 1 || Ch5 < 200) {
+//      analogWrite(Link_DriverIN1, i); 
+//      analogWrite(Link_DriverIN2, 0);
+//      delay(10); 
+//    }
+//  }
   
-  while(digitalRead(Switch1_Link) == 1 || digitalRead(Switch2_Link) == 0 || Ch5 < 200) { 
+  if(digitalRead(Switch1_Link) == 1 || digitalRead(Switch2_Link) == 0 || Ch5 < 200) { 
     analogWrite(Link_DriverIN1, 255); 
     analogWrite(Link_DriverIN2, 0);
+    delay(10);
   }
   analogWrite(Link_DriverIN1, 0); 
   analogWrite(Link_DriverIN2, 0);
 }
-
-
+//-------------------------------------------------------------------------------------------------------
 
 void deployUAS() { 
-  for(int i = 0; i < 255; i++) { 
-    if(digitalRead(Switch1_Link) == 1 && digitalRead(Switch2_Link) == 0 || Ch5 > 200) { 
+  for(int i = 0; i < 255; i+15) { 
+    if(digitalRead(Switch1_Link) == 1 && digitalRead(Switch2_Link) == 0 && digitalRead(Switch4_UAS) == 0 || Ch5 > 200) { 
     analogWrite(UAS_DriverIN2, i); 
     analogWrite(UAS_DriverIN1, 0); 
       delay(10); 
@@ -350,7 +360,7 @@ void deployUAS() {
     analogWrite(UAS_DriverIN2, 0); 
     analogWrite(UAS_DriverIN1, 0); 
 }
-
+//--------------------------------------------------------------------------------------------------------------------
 
 void installUAS() { 
   for(int i = 135; i < 135; i++) { 
@@ -359,7 +369,7 @@ void installUAS() {
     delay(10); 
   }
 }
-
+//--------------------------------------------------------------------------------------------------------------------
 void setAllZero(){
   analogWrite(UAS_DriverIN1, 0);
   analogWrite(UAS_DriverIN2, 0);
@@ -369,6 +379,7 @@ void setAllZero(){
   analogWrite(LockA_DriverIN2, 0);
   analogWrite(LockB_DriverIN1, 0);
   analogWrite(LockB_DriverIN2, 0);
+  
 }
 
 
