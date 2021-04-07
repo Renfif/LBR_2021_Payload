@@ -4,4 +4,5 @@
   (lib (name SM02B-PASS-TBT_LF__SN_)(type Legacy)(uri ${KIPRJMOD}/SM02B-PASS-TBT_LF__SN_.lib)(options "")(descr ""))
   (lib (name eec)(type Legacy)(uri ${KIPRJMOD}/Symbols/eec.lib)(options "")(descr ""))
   (lib (name UAS-rescue)(type Legacy)(uri ${KIPRJMOD}/UAS-rescue.lib)(options "")(descr ""))
+  (lib (name UAS)(type Legacy)(uri ${KIPRJMOD}/UAS.lib)(options "")(descr ""))
 )

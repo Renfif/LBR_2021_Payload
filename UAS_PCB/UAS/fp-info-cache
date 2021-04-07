@@ -1,4 +1,4 @@
-27444695683760
+32340367701585
 UAS
 16_Pad_Set_2mm_pitch
 
@@ -35,12 +35,33 @@ JST_SM03B-PASS-TBT(LF)(SN)
 5
 5
 UAS
+JST_SM04B-GHS-TB(LF)(SN)-
+
+
+0
+6
+6
+UAS
+JST_SM07B-GHS-TB(LF)(SN)
+
+
+0
+9
+9
+UAS
 JST_SM07B-PASS-TBT(LF)(SN)
 
 
 0
 9
 9
+UAS
+JST_SM08B-GHS-TB(LF)(SN)
+
+
+0
+10
+10
 UAS
 JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical
 JST XH series connector, B4B-XH-A (http://www.jst-mfg.com/product/pdf/eng/eXH.pdf), generated with kicad-footprint-generator
