@@ -26,17 +26,6 @@ F 3 "" H 1550 3700 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L UAS-rescue:JST-3-Pin-UAS-cache U9
-U 1 1 6035FF82
-P 5050 5350
-F 0 "U9" H 5050 5425 50  0000 C CNN
-F 1 "JST-3-Pin" H 5050 5334 50  0000 C CNN
-F 2 "UAS:JST_SM03B-PASS-TBT(LF)(SN)" H 5050 5450 50  0001 C CNN
-F 3 "" H 5050 5450 50  0001 C CNN
-	1    5050 5350
-	1    0    0    -1  
-$EndComp
-$Comp
 L UAS-rescue:5A-5V-Converter-UAS-cache U2
 U 1 1 6035F82F
 P 1550 4600
@@ -56,28 +45,6 @@ F 1 "TB6612FNG-Dual-Motor-Driver" H 2900 4135 50  0000 C CNN
 F 2 "UAS:Pololu_TB6612_Dual_Motor_Driver_Carrier_SMT" H 2900 4250 50  0001 C CNN
 F 3 "" H 2900 4250 50  0001 C CNN
 	1    2900 4150
-	1    0    0    -1  
-$EndComp
-$Comp
-L UAS-rescue:UAS-rescue_7.5V-2.4A-Converter-UAS-cache-UAS-cache U10
-U 1 1 6037F8BA
-P 5650 4650
-F 0 "U10" V 5579 4628 50  0000 L CNN
-F 1 "UAS-rescue_7.5V-2.4A-Converter-UAS-cache" V 5670 4628 50  0000 L CNN
-F 2 "UAS:Pololu_7.75V_2.4A_Step_Down_Regulator" H 5650 4750 50  0001 C CNN
-F 3 "" H 5650 4750 50  0001 C CNN
-	1    5650 4650
-	0    1    1    0   
-$EndComp
-$Comp
-L UAS-rescue:JST-3-Pin-UAS-cache U11
-U 1 1 60369E43
-P 5800 5350
-F 0 "U11" H 5800 5425 50  0000 C CNN
-F 1 "JST-3-Pin" H 5800 5334 50  0000 C CNN
-F 2 "UAS:JST_SM03B-PASS-TBT(LF)(SN)" H 5800 5450 50  0001 C CNN
-F 3 "" H 5800 5450 50  0001 C CNN
-	1    5800 5350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -166,20 +133,6 @@ Wire Wire Line
 	2350 5000 2550 5000
 Connection ~ 2550 5000
 Wire Wire Line
-	5250 5500 5250 5000
-Wire Wire Line
-	5250 5000 5450 5000
-Wire Wire Line
-	5450 5000 5450 4900
-Wire Wire Line
-	5250 5600 5350 5600
-Wire Wire Line
-	5350 5600 5350 4900
-Wire Wire Line
-	5550 4900 6250 4900
-Wire Wire Line
-	6250 6400 3350 6400
-Wire Wire Line
 	3350 6400 3350 6700
 Wire Wire Line
 	3350 6700 2750 6700
@@ -187,45 +140,7 @@ Wire Wire Line
 	2750 6700 2750 6400
 Wire Wire Line
 	3200 6300 5450 6300
-Wire Wire Line
-	5450 6300 5450 5000
 Connection ~ 3200 6300
-Connection ~ 5450 5000
-Wire Wire Line
-	5450 5000 6000 5000
-Wire Wire Line
-	6000 5000 6000 5500
-Wire Wire Line
-	5350 5600 5350 6000
-Wire Wire Line
-	5350 6000 6000 6000
-Wire Wire Line
-	6000 6000 6000 5600
-Connection ~ 5350 5600
-$Comp
-L UAS-rescue:Signal-Pad-UAS-cache U12
-U 1 1 60391DEE
-P 4250 5300
-F 0 "U12" H 4328 5559 50  0000 L CNN
-F 1 "Signal-Pad" H 4328 5468 50  0000 L CNN
-F 2 "UAS:Individual_Solder_Pad" H 4250 5300 50  0001 C CNN
-F 3 "" H 4250 5300 50  0001 C CNN
-	1    4250 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L UAS-rescue:Signal-Pad-UAS-cache U13
-U 1 1 60392D35
-P 4450 5300
-F 0 "U13" H 4528 5559 50  0000 L CNN
-F 1 "Signal-Pad" H 4528 5468 50  0000 L CNN
-F 2 "UAS:Individual_Solder_Pad" H 4450 5300 50  0001 C CNN
-F 3 "" H 4450 5300 50  0001 C CNN
-	1    4450 5300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5600 5900 5600 5550
 $Comp
 L power:GND #PWR0101
 U 1 1 6038ECCA
@@ -283,7 +198,6 @@ F 3 "" H 5350 6000 50  0001 C CNN
 	1    5350 6000
 	0    -1   -1   0   
 $EndComp
-Connection ~ 5350 6000
 $Comp
 L UAS:SM07B-GHS-TB(LF)(SN) J2
 U 1 1 606EB8C9
@@ -651,17 +565,96 @@ F 3 "" H 2800 5750 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	6250 4900 6250 6400
-Wire Wire Line
-	4850 5550 4850 5600
-Wire Wire Line
-	4450 5600 4450 5400
-Wire Wire Line
-	4250 5400 4250 5900
-Wire Wire Line
-	4450 5600 4850 5600
-Wire Wire Line
 	1900 4450 2300 4450
+$Comp
+L UAS-rescue:UAS-rescue_7.5V-2.4A-Converter-UAS-cache-UAS-cache U10
+U 1 1 6037F8BA
+P 5650 4650
+F 0 "U10" V 5579 4628 50  0000 L CNN
+F 1 "UAS-rescue_7.5V-2.4A-Converter-UAS-cache" V 5670 4628 50  0000 L CNN
+F 2 "UAS:Pololu_7.75V_2.4A_Step_Down_Regulator" H 5650 4750 50  0001 C CNN
+F 3 "" H 5650 4750 50  0001 C CNN
+	1    5650 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L UAS:JST-3-pin-Revised-Symbol U9
+U 1 1 6035FF82
+P 5850 5550
+F 0 "U9" H 5850 5625 50  0000 C CNN
+F 1 "JST-3-Pin" H 5850 5534 50  0000 C CNN
+F 2 "UAS:JST_SM03B-PASS-TBT(LF)(SN)" H 5850 5650 50  0001 C CNN
+F 3 "" H 5850 5650 50  0001 C CNN
+	1    5850 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L UAS:JST-3-pin-Revised-Symbol U11
+U 1 1 60369E43
+P 5850 5200
+F 0 "U11" H 5850 5275 50  0000 C CNN
+F 1 "JST-3-Pin" H 5850 5184 50  0000 C CNN
+F 2 "UAS:JST_SM03B-PASS-TBT(LF)(SN)" H 5850 5300 50  0001 C CNN
+F 3 "" H 5850 5300 50  0001 C CNN
+	1    5850 5200
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	4250 5900 5600 5900
+	5650 5100 5450 5100
+Wire Wire Line
+	5450 4900 5450 5100
+Connection ~ 5450 5100
+Wire Wire Line
+	5650 5450 5450 5450
+Wire Wire Line
+	5450 5100 5450 5450
+Wire Wire Line
+	5450 5450 5450 6300
+Connection ~ 5450 5450
+Wire Wire Line
+	5550 4900 5550 6400
+Wire Wire Line
+	5550 6400 3350 6400
+Wire Wire Line
+	5650 5200 5350 5200
+Wire Wire Line
+	5350 4900 5350 5200
+Connection ~ 5350 5200
+Wire Wire Line
+	5650 5550 5350 5550
+Wire Wire Line
+	5350 5200 5350 5550
+Wire Wire Line
+	5350 5550 5350 6000
+Connection ~ 5350 5550
+$Comp
+L UAS-rescue:Signal-Pad-UAS-cache U13
+U 1 1 60392D35
+P 4700 5500
+F 0 "U13" H 4778 5759 50  0000 L CNN
+F 1 "Signal-Pad" H 4778 5668 50  0000 L CNN
+F 2 "UAS:Individual_Solder_Pad" H 4700 5500 50  0001 C CNN
+F 3 "" H 4700 5500 50  0001 C CNN
+	1    4700 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L UAS-rescue:Signal-Pad-UAS-cache U12
+U 1 1 60391DEE
+P 4700 5300
+F 0 "U12" H 4778 5559 50  0000 L CNN
+F 1 "Signal-Pad" H 4778 5468 50  0000 L CNN
+F 2 "UAS:Individual_Solder_Pad" H 4700 5300 50  0001 C CNN
+F 3 "" H 4700 5300 50  0001 C CNN
+	1    4700 5300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5650 5300 4800 5300
+Wire Wire Line
+	4850 5650 4850 5500
+Wire Wire Line
+	4850 5500 4800 5500
+Wire Wire Line
+	4850 5650 5650 5650
 $EndSCHEMATC

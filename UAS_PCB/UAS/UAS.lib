@@ -1,6 +1,22 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# 12V-500mA-StepDown
+#
+DEF 12V-500mA-StepDown U 0 40 Y Y 1 F N
+F0 "U" 0 400 50 H V C CNN
+F1 "12V-500mA-StepDown" 0 300 50 H V C CNN
+F2 "" 0 400 50 H I C CNN
+F3 "" 0 400 50 H I C CNN
+DRAW
+S -200 200 250 -100 0 1 0 f
+X SHDN 1 350 -50 100 L 50 43 1 1 P
+X VIN 2 350 50 100 L 50 43 1 1 I
+X GND 3 350 150 100 L 50 43 1 1 I
+X VOUT 4 -300 50 100 R 50 43 1 1 O
+ENDDRAW
+ENDDEF
+#
 # JST-3-pin-Revised-Symbol
 #
 DEF JST-3-pin-Revised-Symbol U 0 40 Y Y 1 F N
