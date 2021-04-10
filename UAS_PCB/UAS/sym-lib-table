@@ -5,4 +5,5 @@
   (lib (name eec)(type Legacy)(uri ${KIPRJMOD}/Symbols/eec.lib)(options "")(descr ""))
   (lib (name UAS-rescue)(type Legacy)(uri ${KIPRJMOD}/UAS-rescue.lib)(options "")(descr ""))
   (lib (name UAS)(type Legacy)(uri ${KIPRJMOD}/UAS.lib)(options "")(descr ""))
+  (lib (name SM03B-PASS-TBT)(type Legacy)(uri C:/Users/mcjro/Documents/KiCad/LBR_2021_Payload-master/UAS_PCB/UAS/SM03B-PASS-TBT.lib)(options "")(descr ""))
 )

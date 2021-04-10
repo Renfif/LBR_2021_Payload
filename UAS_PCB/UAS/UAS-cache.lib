@@ -1,19 +1,6 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# UAS-cache_UAS-rescue_Signal-Pad-UAS-cache
-#
-DEF UAS-cache_UAS-rescue_Signal-Pad-UAS-cache U 0 40 Y Y 1 F N
-F0 "U" -300 -100 50 H V C CNN
-F1 "UAS-cache_UAS-rescue_Signal-Pad-UAS-cache" -300 0 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-S -50 50 50 -100 0 1 0 f
-X Signal_Out 1 0 -100 100 U 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
 # UAS-rescue_12V-StepUp-Converter-UAS-cache
 #
 DEF UAS-rescue_12V-StepUp-Converter-UAS-cache U 0 40 Y Y 1 F N
@@ -59,21 +46,6 @@ X VIN 2 350 -350 100 L 50 50 1 1 I
 X GND 3 -350 -350 100 R 50 50 1 1 I
 X GND 4 -350 -250 100 R 50 50 1 1 I
 X VOUT 5 -350 -150 100 R 50 50 1 1 O
-ENDDRAW
-ENDDEF
-#
-# UAS-rescue_JST-3-Pin-UAS-cache
-#
-DEF UAS-rescue_JST-3-Pin-UAS-cache U 0 40 Y Y 1 F N
-F0 "U" 0 100 50 H V C CNN
-F1 "UAS-rescue_JST-3-Pin-UAS-cache" 0 0 50 H V C CNN
-F2 "" 0 100 50 H I C CNN
-F3 "" 0 100 50 H I C CNN
-DRAW
-S -100 -100 100 -300 0 1 0 f
-X 1 1 200 -150 100 L 50 50 1 1 I
-X 2 2 200 -250 100 L 50 50 1 1 I
-X 3 3 -200 -200 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
@@ -148,6 +120,21 @@ X 1 1 200 -150 100 L 50 50 1 1 I
 X 2 2 200 -250 100 L 50 50 1 1 I
 X 3 3 -200 -150 100 R 50 50 1 1 I
 X 4 4 -200 -250 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# UAS_JST-3-pin-Revised-Symbol
+#
+DEF UAS_JST-3-pin-Revised-Symbol U 0 40 Y Y 1 F N
+F0 "U" 0 350 50 H V C CNN
+F1 "UAS_JST-3-pin-Revised-Symbol" 0 250 50 H V C CNN
+F2 "" 0 350 50 H I C CNN
+F3 "" 0 350 50 H I C CNN
+DRAW
+S -100 150 50 -150 0 1 0 f
+X 1 1 -200 100 100 R 50 50 1 1 P
+X 2 2 -200 0 100 R 50 50 1 1 P
+X 3 3 -200 -100 100 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

@@ -1,6 +1,21 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# JST-3-pin-Revised-Symbol
+#
+DEF JST-3-pin-Revised-Symbol U 0 40 Y Y 1 F N
+F0 "U" 0 350 50 H V C CNN
+F1 "JST-3-pin-Revised-Symbol" 0 250 50 H V C CNN
+F2 "" 0 350 50 H I C CNN
+F3 "" 0 350 50 H I C CNN
+DRAW
+S -100 150 50 -150 0 1 0 f
+X 1 1 -200 100 100 R 50 50 1 1 P
+X 2 2 -200 0 100 R 50 50 1 1 P
+X 3 3 -200 -100 100 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # SM04B-GHS-TB(LF)(SN)-
 #
 DEF SM04B-GHS-TB(LF)(SN)- J 0 40 Y Y 1 L N
