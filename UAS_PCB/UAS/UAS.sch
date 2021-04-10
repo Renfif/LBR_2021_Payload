@@ -48,10 +48,6 @@ F 3 "" H 2900 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1250 3800 1100 3800
-Wire Wire Line
-	1100 3800 1100 4250
-Wire Wire Line
 	1100 4250 1200 4250
 Wire Wire Line
 	1850 3850 1900 3850
@@ -94,9 +90,6 @@ F 3 "" H 3000 6650 50  0001 C CNN
 	1    3000 6550
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	1100 4250 1100 6400
-Connection ~ 1100 4250
 Connection ~ 2750 6400
 Wire Wire Line
 	2750 6400 2800 6400
@@ -343,12 +336,9 @@ Wire Wire Line
 Wire Wire Line
 	3900 3800 3900 3850
 Wire Wire Line
-	2050 3750 2850 3750
-Wire Wire Line
 	3700 3750 3700 3650
 Wire Wire Line
 	3700 3650 3900 3650
-Connection ~ 2050 3750
 Connection ~ 3900 3650
 Wire Wire Line
 	3900 3650 3900 3700
@@ -379,7 +369,7 @@ Wire Wire Line
 Wire Wire Line
 	3200 2100 2800 2100
 Wire Wire Line
-	2800 2100 2800 3850
+	2800 2100 2800 3750
 Connection ~ 2800 3850
 Wire Wire Line
 	2800 3850 3050 3850
@@ -387,7 +377,6 @@ Wire Wire Line
 	3200 2200 2850 2200
 Wire Wire Line
 	2850 2200 2850 3750
-Connection ~ 2850 3750
 Wire Wire Line
 	2850 3750 3100 3750
 Wire Wire Line
@@ -616,21 +605,10 @@ Wire Wire Line
 Wire Wire Line
 	4850 5650 5650 5650
 $Comp
-L Device:LED D?
-U 1 1 60925126
-P 6400 4150
-F 0 "D?" H 6393 4366 50  0000 C CNN
-F 1 "LED" H 6393 4275 50  0000 C CNN
-F 2 "UAS:Indicator-LED" H 6400 4150 50  0001 C CNN
-F 3 "~" H 6400 4150 50  0001 C CNN
-	1    6400 4150
-	1    0    0    -1  
-$EndComp
-$Comp
-L UAS:12V-500mA-StepDown U?
+L UAS:12V-500mA-StepDown U1
 U 1 1 609351DD
 P 2900 5550
-F 0 "U?" H 2925 5925 50  0000 C CNN
+F 0 "U1" H 2925 5925 50  0000 C CNN
 F 1 "12V-500mA-StepDown" H 2925 5834 50  0000 C CNN
 F 2 "UAS:12V-500mA-StepDown" H 2900 5950 50  0001 C CNN
 F 3 "" H 2900 5950 50  0001 C CNN
@@ -644,10 +622,7 @@ Wire Wire Line
 Wire Wire Line
 	2500 4900 2550 4900
 Wire Wire Line
-	1100 6400 2650 6400
-Wire Wire Line
 	2650 6550 2650 6400
-Connection ~ 2650 6400
 Wire Wire Line
 	2650 6400 2750 6400
 Wire Wire Line
@@ -670,4 +645,33 @@ Wire Wire Line
 	2950 6050 2750 6050
 Wire Wire Line
 	2750 6050 2750 6400
+Connection ~ 2650 6400
+Wire Wire Line
+	1100 6400 2650 6400
+Wire Wire Line
+	1100 4250 1100 6400
+Connection ~ 1100 4250
+Wire Wire Line
+	1100 3800 1100 4250
+Wire Wire Line
+	1250 3800 1100 3800
+$Comp
+L Device:LED D1
+U 1 1 60925126
+P 2450 3750
+F 0 "D1" H 2443 3966 50  0000 C CNN
+F 1 "LED" H 2443 3875 50  0000 C CNN
+F 2 "UAS:Indicator-LED" H 2450 3750 50  0001 C CNN
+F 3 "~" H 2450 3750 50  0001 C CNN
+	1    2450 3750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2300 3750 2050 3750
+Connection ~ 2050 3750
+Wire Wire Line
+	2600 3750 2800 3750
+Connection ~ 2800 3750
+Wire Wire Line
+	2800 3750 2800 3850
 $EndSCHEMATC
