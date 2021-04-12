@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name UAS_Teensy)(type Legacy)(uri ${KIPRJMOD}/UAS_Teensy.lib)(options "")(descr ""))
   (lib (name UAS)(type Legacy)(uri C:/Users/mcjro/Documents/GitHub/LBR_2021_Payload/UAS_PCB/UAS/UAS.lib)(options "")(descr ""))
+  (lib (name teensy)(type Legacy)(uri "${KIPRJMOD}/External Symbol/teensy_library-master/teensy_library-master/teensy.lib")(options "")(descr ""))
 )
