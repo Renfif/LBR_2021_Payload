@@ -31,4 +31,5 @@
   (lib (name SquantorUsb)(type Legacy)(uri ${KIPRJMOD}/../squantorPcbLibrary/SquantorUsb.lib)(options "")(descr ""))
   (lib (name SquantorWCH)(type Legacy)(uri ${KIPRJMOD}/../squantorPcbLibrary/SquantorWCH.lib)(options "")(descr ""))
   (lib (name SquantorWinbond)(type Legacy)(uri ${KIPRJMOD}/../squantorPcbLibrary/SquantorWinbond.lib)(options "")(descr ""))
+  (lib (name teensy4.0)(type Legacy)(uri "${KIPRJMOD}/External Symbol/teensy4.0.lib")(options "")(descr ""))
 )
