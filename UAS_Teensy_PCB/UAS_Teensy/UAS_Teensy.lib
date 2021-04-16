@@ -82,4 +82,17 @@ X 2_OUT2 4 -1100 1050 200 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
+# Test_Pad
+#
+DEF Test_Pad U 0 40 Y Y 1 F N
+F0 "U" 0 0 50 H V C CNN
+F1 "Test_Pad" 0 -450 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -50 -100 50 -350 0 1 0 f
+X ~ 1 0 -200 100 U 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
 #End Library

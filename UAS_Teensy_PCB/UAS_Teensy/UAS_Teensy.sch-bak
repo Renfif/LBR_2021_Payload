@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:UAS_Teensy-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -188,7 +187,7 @@ F 3 "" H 4850 2950 50  0001 C CNN
 	1    5250 2750
 	1    0    0    -1  
 $EndComp
-Text GLabel 5150 4350 0    50   Input ~ 0
+Text GLabel 5150 4450 0    50   Input ~ 0
 GND
 Wire Wire Line
 	6750 2700 6750 2800
@@ -334,18 +333,50 @@ F 7 "5.7 mm" H 5450 4400 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
 $EndComp
 Wire Wire Line
 	6700 3500 6850 3500
-Text GLabel 5100 4450 0    50   Input ~ 0
+Text GLabel 4950 4350 0    50   Input ~ 0
 5V
 Wire Wire Line
-	5300 4350 5150 4350
-Wire Wire Line
-	5300 4450 5100 4450
-Text GLabel 6500 3900 2    50   Input ~ 0
+	5300 4450 5250 4450
+Text GLabel 6500 3800 2    50   Input ~ 0
 GND
-Text GLabel 6550 3800 2    50   Input ~ 0
+Text GLabel 6550 3700 2    50   Input ~ 0
 5V
 Wire Wire Line
-	6350 3900 6500 3900
+	6350 3800 6500 3800
 Wire Wire Line
-	6350 3800 6550 3800
+	6350 3700 6550 3700
+$Comp
+L UAS_Teensy:Test_Pad U?
+U 1 1 607AED00
+P 5250 4500
+F 0 "U?" H 5328 4322 50  0000 L CNN
+F 1 "Test_Pad" H 5328 4231 50  0000 L CNN
+F 2 "UAS_Teensy:Individual_Solder_Pad" H 5250 4500 50  0001 C CNN
+F 3 "" H 5250 4500 50  0001 C CNN
+	1    5250 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 4450 5250 4700
+Connection ~ 5250 4450
+Wire Wire Line
+	5250 4450 5150 4450
+$Comp
+L UAS_Teensy:Test_Pad U?
+U 1 1 607B1DE3
+P 5100 4500
+F 0 "U?" H 5178 4322 50  0000 L CNN
+F 1 "Test_Pad" H 5178 4231 50  0000 L CNN
+F 2 "UAS_Teensy:Individual_Solder_Pad" H 5100 4500 50  0001 C CNN
+F 3 "" H 5100 4500 50  0001 C CNN
+	1    5100 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 4350 5100 4350
+Wire Wire Line
+	5100 4350 5100 4700
+Connection ~ 5100 4350
+Wire Wire Line
+	5100 4350 5300 4350
 $EndSCHEMATC
