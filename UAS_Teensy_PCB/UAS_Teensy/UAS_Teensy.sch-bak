@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:UAS_Teensy-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -282,8 +281,6 @@ GND
 Text GLabel 3850 2700 2    50   Input ~ 0
 5V
 Wire Wire Line
-	3650 3200 3850 3200
-Wire Wire Line
 	3650 3300 3800 3300
 Text GLabel 3800 3300 2    50   Input ~ 0
 GND
@@ -317,4 +314,14 @@ Wire Wire Line
 	4100 3850 4100 3900
 Wire Wire Line
 	4100 3900 4150 3900
+Wire Wire Line
+	3650 3200 3850 3200
+Text GLabel 3850 4200 2    50   Input ~ 0
+5V
+Wire Wire Line
+	3650 4200 3850 4200
+Wire Wire Line
+	3650 4000 3800 4000
+Text GLabel 3800 4000 2    50   Input ~ 0
+GND
 $EndSCHEMATC
