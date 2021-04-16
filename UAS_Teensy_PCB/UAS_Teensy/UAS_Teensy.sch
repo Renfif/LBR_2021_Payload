@@ -188,14 +188,8 @@ F 3 "" H 4850 2950 50  0001 C CNN
 	1    5250 2750
 	1    0    0    -1  
 $EndComp
-Text GLabel 6550 3700 2    50   Input ~ 0
-5V
-Text GLabel 6500 3800 2    50   Input ~ 0
+Text GLabel 5150 4350 0    50   Input ~ 0
 GND
-Wire Wire Line
-	6550 3700 6350 3700
-Wire Wire Line
-	6500 3800 6350 3800
 Wire Wire Line
 	6750 2700 6750 2800
 Wire Wire Line
@@ -294,8 +288,6 @@ GND
 Wire Wire Line
 	6850 3400 6750 3400
 Wire Wire Line
-	6700 3500 6850 3500
-Wire Wire Line
 	6350 3200 6850 3200
 Wire Wire Line
 	6850 3300 6350 3300
@@ -325,4 +317,35 @@ Wire Wire Line
 	3650 4000 3800 4000
 Text GLabel 3800 4000 2    50   Input ~ 0
 GND
+$Comp
+L UAS:UAS-rescue_SM02B-PASS-TBT(LF)(SN)-SM02B-PASS-TBT_LF__SN_ J8
+U 1 1 607973F1
+P 5450 4400
+F 0 "J8" H 5680 4396 50  0000 L CNN
+F 1 "UAS-rescue_SM02B-PASS-TBT(LF)(SN)-SM02B-PASS-TBT_LF__SN_" H 5680 4305 50  0000 L CNN
+F 2 "UAS_Teensy:SM02BGHSTBLFSN" H 5450 4400 50  0001 L BNN
+F 3 "" H 5450 4400 50  0001 L BNN
+F 4 "N/A" H 5450 4400 50  0001 L BNN "PARTREV"
+F 5 "JST" H 5450 4400 50  0001 L BNN "MANUFACTURER"
+F 6 "Manufacturer Recommendations" H 5450 4400 50  0001 L BNN "STANDARD"
+F 7 "5.7 mm" H 5450 4400 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
+	1    5450 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 3500 6850 3500
+Text GLabel 5100 4450 0    50   Input ~ 0
+5V
+Wire Wire Line
+	5300 4350 5150 4350
+Wire Wire Line
+	5300 4450 5100 4450
+Text GLabel 6500 3800 2    50   Input ~ 0
+GND
+Text GLabel 6550 3700 2    50   Input ~ 0
+5V
+Wire Wire Line
+	6350 3800 6500 3800
+Wire Wire Line
+	6350 3700 6550 3700
 $EndSCHEMATC
