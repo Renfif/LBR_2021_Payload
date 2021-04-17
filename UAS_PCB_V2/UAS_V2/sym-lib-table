@@ -1,2 +1,4 @@
 (sym_lib_table
+  (lib (name UAS-Old)(type Legacy)(uri ${KIPRJMOD}/UAS-Old.lib)(options "")(descr ""))
+  (lib (name UAS_V2)(type Legacy)(uri ${KIPRJMOD}/UAS_V2.lib)(options "")(descr ""))
 )
