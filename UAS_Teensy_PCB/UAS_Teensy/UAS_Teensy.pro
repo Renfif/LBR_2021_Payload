@@ -1,4 +1,4 @@
-update=15-Apr-21 11:25:02 PM
+update=17-Apr-21 7:02:04 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -53,6 +53,8 @@ ViaDiameter8=1.7
 ViaDrill8=1.4
 ViaDiameter9=1.9
 ViaDrill9=1.6
+ViaDiameter10=2.25
+ViaDrill10=2
 dPairWidth1=0.2
 dPairGap1=0.25
 dPairViaGap1=0.25
